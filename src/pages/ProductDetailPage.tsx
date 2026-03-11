@@ -1,0 +1,179 @@
+import { useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ShoppingBag, Heart, ChevronLeft, Star, Minus, Plus } from "lucide-react";
+import { products, formatPrice } from "@/data/products";
+import { useCartStore } from "@/store/cartStore";
+import ProductCard from "@/components/ProductCard";
+import { toast } from "sonner";
+
+export default function ProductDetailPage() {
+  const { id } = useParams();
+  const product = products.find((p) => p.id === id);
+  const addItem = useCartStore((s) => s.addItem);
+
+  const [selectedSize, setSelectedSize] = useState<number | null>(null);
+  const [quantity, setQuantity] = useState(1);
+  const [activeImage, setActiveImage] = useState(0);
+
+  if (!product) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-muted-foreground">Sản phẩm không tồn tại.</p>
+      </div>
+    );
+  }
+
+  const related = products.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 4);
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      toast.error("Vui lòng chọn size!");
+      return;
+    }
+    addItem(product, selectedSize, quantity);
+    toast.success(`Đã thêm ${product.name} vào giỏ hàng!`);
+  };
+
+  return (
+    <div className="min-h-screen">
+      <div className="container mx-auto px-4 py-8">
+        {/* Breadcrumb */}
+        <Link to="/shop" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors">
+          <ChevronLeft className="w-4 h-4" /> Quay lại cửa hàng
+        </Link>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Images */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+          >
+            <div className="aspect-square bg-secondary rounded-sm overflow-hidden mb-4">
+              <img
+                src={product.images[activeImage]}
+                alt={product.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex gap-3">
+              {product.images.map((img, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveImage(i)}
+                  className={`w-20 h-20 rounded-sm overflow-hidden border-2 transition-colors ${
+                    activeImage === i ? "border-accent" : "border-transparent"
+                  }`}
+                >
+                  <img src={img} alt="" className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Info */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">{product.brand}</p>
+            <h1 className="font-display text-4xl sm:text-5xl mb-4">{product.name}</h1>
+
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-accent text-accent" : "text-border"}`}
+                  />
+                ))}
+              </div>
+              <span className="text-sm text-muted-foreground">({product.reviews} đánh giá)</span>
+            </div>
+
+            <div className="flex items-center gap-3 mb-8">
+              <span className="font-display text-3xl">{formatPrice(product.price)}</span>
+              {product.originalPrice && (
+                <span className="text-lg text-muted-foreground line-through">
+                  {formatPrice(product.originalPrice)}
+                </span>
+              )}
+            </div>
+
+            {/* Size */}
+            <div className="mb-8">
+              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">Chọn Size</h4>
+              <div className="flex flex-wrap gap-2">
+                {product.sizes.map((s) => (
+                  <button
+                    key={s}
+                    onClick={() => setSelectedSize(s)}
+                    className={`w-12 h-12 flex items-center justify-center text-sm font-medium rounded-sm transition-colors ${
+                      selectedSize === s
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-secondary hover:bg-secondary/80"
+                    }`}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Quantity */}
+            <div className="mb-8">
+              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">Số lượng</h4>
+              <div className="flex items-center border border-border rounded-sm w-fit">
+                <button
+                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                  className="p-3 hover:bg-secondary transition-colors"
+                >
+                  <Minus className="w-4 h-4" />
+                </button>
+                <span className="px-6 text-sm font-medium">{quantity}</span>
+                <button
+                  onClick={() => setQuantity(quantity + 1)}
+                  className="p-3 hover:bg-secondary transition-colors"
+                >
+                  <Plus className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="flex gap-3 mb-10">
+              <button
+                onClick={handleAddToCart}
+                className="flex-1 flex items-center justify-center gap-2 bg-accent text-accent-foreground py-4 font-medium text-sm uppercase tracking-wider hover:bg-accent/90 transition-colors"
+              >
+                <ShoppingBag className="w-4 h-4" /> Thêm vào giỏ hàng
+              </button>
+              <button className="p-4 border border-border hover:bg-secondary rounded-sm transition-colors">
+                <Heart className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Description */}
+            <div className="border-t border-border pt-8">
+              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">Mô tả sản phẩm</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Related Products */}
+        {related.length > 0 && (
+          <section className="mt-20 pt-16 border-t border-border">
+            <h2 className="font-display text-3xl tracking-wider mb-10">SẢN PHẨM LIÊN QUAN</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {related.map((p, i) => (
+                <ProductCard key={p.id} product={p} index={i} />
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
+  );
+}
