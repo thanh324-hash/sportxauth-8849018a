@@ -27,7 +27,7 @@ export default function ProductCard({ product, index = 0 }: Props) {
           <div className="absolute top-3 left-3 flex flex-col gap-1">
             {product.isNew && (
               <span className="bg-accent text-accent-foreground text-[10px] font-bold uppercase tracking-wider px-2 py-1">
-                Mới
+                NEW
               </span>
             )}
             {product.originalPrice && (

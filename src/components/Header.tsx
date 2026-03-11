@@ -5,10 +5,10 @@ import { useCartStore } from "@/store/cartStore";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { to: "/", label: "Trang Chủ" },
-  { to: "/shop", label: "Cửa Hàng" },
-  { to: "/about", label: "Giới Thiệu" },
-  { to: "/contact", label: "Liên Hệ" },
+  { to: "/", label: "홈" },
+  { to: "/shop", label: "쇼핑" },
+  { to: "/about", label: "소개" },
+  { to: "/contact", label: "문의" },
 ];
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
     <>
       {/* Top bar */}
       <div className="bg-primary text-primary-foreground text-xs py-1.5 text-center tracking-wider font-medium">
-        MIỄN PHÍ VẬN CHUYỂN CHO ĐƠN HÀNG TỪ 1.000.000₫
+        국내 무료배송 ₩100,000 이상 | 해외배송 가능 🌍
       </div>
 
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
@@ -91,7 +91,7 @@ export default function Header() {
                   <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                   <input
                     type="text"
-                    placeholder="Tìm kiếm sản phẩm..."
+                    placeholder="상품 검색..."
                     className="w-full pl-10 pr-4 py-2.5 bg-secondary rounded-sm text-sm focus:outline-none focus:ring-1 focus:ring-accent"
                     autoFocus
                   />

@@ -10,9 +10,9 @@ const bestSellers = products.filter((p) => p.isBestSeller);
 const newArrivals = products.filter((p) => p.isNew);
 
 const reviews = [
-  { name: "Minh Tuấn", rating: 5, text: "Giày chất lượng tuyệt vời, đúng hàng chính hãng. Giao hàng nhanh!" },
-  { name: "Thanh Hà", rating: 5, text: "Mua lần thứ 3 rồi, luôn hài lòng. Size chuẩn, đóng gói cẩn thận." },
-  { name: "Quốc Bảo", rating: 4, text: "Giày đẹp, êm chân. Dịch vụ chăm sóc khách hàng rất tốt." },
+  { name: "김민수", rating: 5, text: "정품 보장에 품질도 최고입니다. 배송도 빠르고 포장도 꼼꼼해요!" },
+  { name: "이수진", rating: 5, text: "세 번째 구매인데 항상 만족합니다. 사이즈도 정확하고 포장이 깔끔해요." },
+  { name: "박준혁", rating: 4, text: "신발이 예쁘고 편해요. 고객 서비스도 정말 좋습니다. 해외 친구에게도 선물했어요!" },
 ];
 
 export default function HomePage() {
@@ -34,27 +34,27 @@ export default function HomePage() {
             className="max-w-xl"
           >
             <p className="text-accent font-display text-xl tracking-widest mb-2">
-              BỘ SƯU TẬP MỚI 2026
+              2026 NEW COLLECTION
             </p>
             <h1 className="font-display text-6xl sm:text-8xl text-sport-red-foreground leading-none mb-6">
-              BƯỚC CHẠY<br />
-              <span className="text-accent">ĐỈNH CAO</span>
+              최고의<br />
+              <span className="text-accent">퍼포먼스</span>
             </h1>
             <p className="text-sport-red-foreground/70 text-lg mb-8 max-w-md">
-              Khám phá bộ sưu tập giày thể thao mới nhất với công nghệ tiên tiến, thiết kế đột phá.
+              최첨단 기술과 혁신적인 디자인의 최신 스포츠 신발 컬렉션을 만나보세요. 국내외 배송 가능.
             </p>
             <div className="flex gap-4">
               <Link
                 to="/shop"
                 className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-3.5 font-medium text-sm uppercase tracking-wider hover:bg-accent/90 transition-colors"
               >
-                Mua Ngay <ArrowRight className="w-4 h-4" />
+                지금 구매 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/shop"
                 className="inline-flex items-center gap-2 border border-sport-red-foreground/30 text-sport-red-foreground px-8 py-3.5 font-medium text-sm uppercase tracking-wider hover:bg-sport-red-foreground/10 transition-colors"
               >
-                Xem Thêm
+                더 보기
               </Link>
             </div>
           </motion.div>
@@ -65,7 +65,7 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="font-display text-4xl text-center mb-12 tracking-wider">
-            DANH MỤC NỔI BẬT
+            인기 카테고리
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {categories.map((cat, i) => (
@@ -95,9 +95,9 @@ export default function HomePage() {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="font-display text-4xl tracking-wider">SẢN PHẨM BÁN CHẠY</h2>
+            <h2 className="font-display text-4xl tracking-wider">베스트셀러</h2>
             <Link to="/shop" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
-              Xem tất cả <ArrowRight className="w-4 h-4" />
+              전체 보기 <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -110,7 +110,7 @@ export default function HomePage() {
 
       {/* Promo Banner */}
       <section className="relative h-[400px] overflow-hidden">
-        <img src={promoBanner} alt="Khuyến mãi" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={promoBanner} alt="프로모션" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-primary/60" />
         <div className="relative h-full container mx-auto px-4 flex items-center justify-center text-center">
           <motion.div
@@ -118,15 +118,15 @@ export default function HomePage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <p className="text-accent font-display text-xl tracking-widest mb-2">KHUYẾN MÃI ĐẶC BIỆT</p>
+            <p className="text-accent font-display text-xl tracking-widest mb-2">특별 프로모션</p>
             <h2 className="font-display text-5xl sm:text-7xl text-primary-foreground mb-6">
-              GIẢM ĐẾN 50%
+              최대 50% 할인
             </h2>
             <Link
               to="/shop"
               className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-3.5 font-medium text-sm uppercase tracking-wider hover:bg-accent/90 transition-colors"
             >
-              Mua Ngay <ArrowRight className="w-4 h-4" />
+              지금 구매 <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         </div>
@@ -136,9 +136,9 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="font-display text-4xl tracking-wider">SẢN PHẨM MỚI</h2>
+            <h2 className="font-display text-4xl tracking-wider">신상품</h2>
             <Link to="/shop" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
-              Xem tất cả <ArrowRight className="w-4 h-4" />
+              전체 보기 <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -153,7 +153,7 @@ export default function HomePage() {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <h2 className="font-display text-4xl text-center mb-12 tracking-wider">
-            KHÁCH HÀNG NÓI GÌ
+            고객 리뷰
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviews.map((r, i) => (
