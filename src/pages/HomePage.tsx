@@ -67,7 +67,7 @@ export default function HomePage() {
           <h2 className="font-display text-4xl text-center mb-12 tracking-wider">
             인기 카테고리
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((cat, i) => (
               <motion.div
                 key={cat.id}
