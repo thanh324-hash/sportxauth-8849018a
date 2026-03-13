@@ -6,6 +6,14 @@ import shoeBlue from "@/assets/shoe-blue.jpg";
 import shoeGreen from "@/assets/shoe-green.jpg";
 import shoeOrange from "@/assets/shoe-orange.jpg";
 import heroShoe from "@/assets/hero-shoe.jpg";
+import jerseySoccer from "@/assets/jersey-soccer.jpg";
+import jerseyBasketball from "@/assets/jersey-basketball.jpg";
+import jerseyRunning from "@/assets/jersey-running.jpg";
+import jerseyTraining from "@/assets/jersey-training.jpg";
+import fashionHoodie from "@/assets/fashion-hoodie.jpg";
+import fashionTshirt from "@/assets/fashion-tshirt.jpg";
+import fashionJacket from "@/assets/fashion-jacket.jpg";
+import fashionJogger from "@/assets/fashion-jogger.jpg";
 
 export type Product = {
   id: string;
