@@ -139,6 +139,8 @@ export const categories = [
   { id: "basketball", name: "농구화", icon: "🏀" },
   { id: "lifestyle", name: "라이프스타일", icon: "👟" },
   { id: "fashion", name: "패션 신발", icon: "✨" },
+  { id: "sportswear", name: "스포츠 유니폼", icon: "⚽" },
+  { id: "fashionwear", name: "정품 패션 의류", icon: "👔" },
 ];
 
 export const brands = ["Nike", "Adidas", "Puma", "New Balance", "Converse"];

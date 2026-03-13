@@ -21,6 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Sonner />
       <BrowserRouter>
+        <MarqueeBanner />
         <Header />
         <main>
           <Routes>
