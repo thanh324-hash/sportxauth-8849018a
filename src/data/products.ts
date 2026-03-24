@@ -198,9 +198,9 @@ export const products: Product[] = [
   // 정품 패션 의류
   {
     id: "13",
-    name: "오버사이즈 스트릿 후디",
-    brand: "Nike",
-    price: 139000,
+    name: "thug club x adidas auth",
+    brand: "Adidas",
+    price: 229000,
     originalPrice: 169000,
     images: [fashionHoodie, fashionHoodie, fashionHoodie],
     category: "fashionwear",
