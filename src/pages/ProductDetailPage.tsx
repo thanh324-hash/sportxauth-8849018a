@@ -78,7 +78,7 @@ export default function ProductDetailPage() {
             transition={{ delay: 0.1 }}
           >
             <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">{product.brand}</p>
-            <h1 className="font-display text-4xl sm:text-5xl mb-4">{product.name}</h1>
+            <h1 className="font-display sm:text-5xl mb-4 text-sm">{product.name}</h1>
 
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center gap-1">
