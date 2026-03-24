@@ -201,7 +201,7 @@ export const products: Product[] = [
     name: "thug club x adidas auth",
     brand: "Adidas",
     price: 229000,
-    originalPrice: 169000,
+    originalPrice: 580000,
     images: [fashionHoodie, fashionHoodie, fashionHoodie],
     category: "fashionwear",
     sizes: [95, 100, 105, 110, 115],
