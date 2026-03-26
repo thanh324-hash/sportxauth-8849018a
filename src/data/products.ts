@@ -229,7 +229,7 @@ export const products: Product[] = [
     name: "프리미엄 봄버 재킷",
     brand: "Nike",
     price: 259000,
-    images: [fashionJacket, fashionJacket, fashionJacket],
+    images: [fashionJacket, fashionJacket, fashionJacket, fashionJacket, fashionJacket, fashionJacket],
     category: "fashionwear",
     sizes: [95, 100, 105, 110, 115],
     rating: 4.8,
