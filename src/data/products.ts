@@ -216,7 +216,7 @@ export const products: Product[] = [
     name: "미니멀 로고 티셔츠",
     brand: "Adidas",
     price: 59000,
-    images: [fashionTshirt, fashionTshirt, fashionTshirt],
+    images: [fashionTshirt, fashionTshirt, fashionTshirt, fashionTshirt, fashionTshirt, fashionTshirt],
     category: "fashionwear",
     sizes: [95, 100, 105, 110],
     rating: 4.6,
