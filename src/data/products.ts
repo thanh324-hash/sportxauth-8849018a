@@ -119,7 +119,7 @@ export const products: Product[] = [
     brand: "Puma",
     price: 149000,
     originalPrice: 189000,
-    images: [shoeOrange, shoeOrange, shoeOrange],
+    images: [shoeOrange, shoeOrange, shoeOrange, shoeOrange, shoeOrange, shoeOrange],
     category: "lifestyle",
     sizes: [250, 255, 260, 265, 270, 275],
     rating: 4.4,
