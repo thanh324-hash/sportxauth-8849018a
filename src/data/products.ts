@@ -65,7 +65,7 @@ export const products: Product[] = [
     name: "Urban Shadow",
     brand: "Adidas",
     price: 159000,
-    images: [shoeLifestyle, shoeLifestyle, shoeLifestyle],
+    images: [shoeLifestyle, shoeLifestyle, shoeLifestyle, shoeLifestyle, shoeLifestyle, shoeLifestyle],
     category: "lifestyle",
     sizes: [250, 255, 260, 265, 270, 275],
     rating: 4.7,
