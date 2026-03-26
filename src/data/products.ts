@@ -161,7 +161,7 @@ export const products: Product[] = [
     name: "엘리트 농구 저지",
     brand: "Nike",
     price: 109000,
-    images: [jerseyBasketball, jerseyBasketball, jerseyBasketball],
+    images: [jerseyBasketball, jerseyBasketball, jerseyBasketball, jerseyBasketball, jerseyBasketball, jerseyBasketball],
     category: "sportswear",
     sizes: [95, 100, 105, 110, 115],
     rating: 4.7,
