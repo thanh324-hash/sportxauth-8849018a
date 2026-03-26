@@ -131,7 +131,7 @@ export const products: Product[] = [
     name: "Blaze Pro Max",
     brand: "Nike",
     price: 249000,
-    images: [heroShoe, heroShoe, heroShoe],
+    images: [heroShoe, heroShoe, heroShoe, heroShoe, heroShoe, heroShoe],
     category: "basketball",
     sizes: [265, 270, 275, 280, 285, 290],
     rating: 4.9,
