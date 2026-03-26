@@ -105,7 +105,7 @@ export const products: Product[] = [
     name: "Fresh Foam Trail",
     brand: "New Balance",
     price: 169000,
-    images: [shoeGreen, shoeGreen, shoeGreen],
+    images: [shoeGreen, shoeGreen, shoeGreen, shoeGreen, shoeGreen, shoeGreen],
     category: "running",
     sizes: [260, 265, 270, 275, 280],
     rating: 4.7,
