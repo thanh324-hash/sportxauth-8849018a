@@ -92,7 +92,7 @@ export const products: Product[] = [
     name: "Speed Runner Elite",
     brand: "Puma",
     price: 229000,
-    images: [shoeBlue, shoeBlue, shoeBlue],
+    images: [shoeBlue, shoeBlue, shoeBlue, shoeBlue, shoeBlue, shoeBlue],
     category: "running",
     sizes: [255, 260, 265, 270, 275, 280],
     rating: 4.5,
