@@ -52,7 +52,7 @@ export const products: Product[] = [
     name: "Court Elite X",
     brand: "Nike",
     price: 219000,
-    images: [shoeBasketball, shoeBasketball, shoeBasketball],
+    images: [shoeBasketball, shoeBasketball, shoeBasketball, shoeBasketball, shoeBasketball, shoeBasketball],
     category: "basketball",
     sizes: [260, 265, 270, 275, 280, 285],
     rating: 4.9,
