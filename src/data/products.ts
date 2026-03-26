@@ -174,7 +174,7 @@ export const products: Product[] = [
     name: "퍼포먼스 러닝 셔츠",
     brand: "Adidas",
     price: 79000,
-    images: [jerseyRunning, jerseyRunning, jerseyRunning],
+    images: [jerseyRunning, jerseyRunning, jerseyRunning, jerseyRunning, jerseyRunning, jerseyRunning],
     category: "sportswear",
     sizes: [95, 100, 105, 110],
     rating: 4.6,
