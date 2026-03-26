@@ -188,7 +188,7 @@ export const products: Product[] = [
     brand: "Puma",
     price: 189000,
     originalPrice: 229000,
-    images: [jerseyTraining, jerseyTraining, jerseyTraining],
+    images: [jerseyTraining, jerseyTraining, jerseyTraining, jerseyTraining, jerseyTraining, jerseyTraining],
     category: "sportswear",
     sizes: [95, 100, 105, 110, 115],
     rating: 4.5,
