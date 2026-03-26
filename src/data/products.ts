@@ -79,7 +79,7 @@ export const products: Product[] = [
     brand: "Adidas",
     price: 199000,
     originalPrice: 239000,
-    images: [shoeFashion, shoeFashion, shoeFashion],
+    images: [shoeFashion, shoeFashion, shoeFashion, shoeFashion, shoeFashion, shoeFashion],
     category: "fashion",
     sizes: [230, 235, 240, 245, 250, 255, 260],
     rating: 4.6,
