@@ -243,7 +243,7 @@ export const products: Product[] = [
     brand: "New Balance",
     price: 99000,
     originalPrice: 129000,
-    images: [fashionJogger, fashionJogger, fashionJogger],
+    images: [fashionJogger, fashionJogger, fashionJogger, fashionJogger, fashionJogger, fashionJogger],
     category: "fashionwear",
     sizes: [95, 100, 105, 110, 115],
     rating: 4.7,
