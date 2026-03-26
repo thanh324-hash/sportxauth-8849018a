@@ -147,7 +147,7 @@ export const products: Product[] = [
     brand: "Nike",
     price: 129000,
     originalPrice: 159000,
-    images: [jerseySoccer, jerseySoccer, jerseySoccer],
+    images: [jerseySoccer, jerseySoccer, jerseySoccer, jerseySoccer, jerseySoccer, jerseySoccer],
     category: "sportswear",
     sizes: [95, 100, 105, 110, 115],
     rating: 4.8,
