@@ -14,6 +14,10 @@ import fashionHoodie from "@/assets/fashion-hoodie.jpg";
 import fashionTshirt from "@/assets/fashion-tshirt.jpg";
 import fashionJacket from "@/assets/fashion-jacket.jpg";
 import fashionJogger from "@/assets/fashion-jogger.jpg";
+import bagBackpack from "@/assets/bag-backpack-black.jpg";
+import bagDuffle from "@/assets/bag-duffle-white.jpg";
+import bagSling from "@/assets/bag-sling-brown.jpg";
+import bagTote from "@/assets/bag-tote-red.jpg";
 
 export type Product = {
   id: string;
