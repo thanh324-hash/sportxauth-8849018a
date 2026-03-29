@@ -257,8 +257,8 @@ export const products: Product[] = [
   // 가방 & 백팩
   {
     id: "17",
-    name: "스포츠 백팩 프로",
-    brand: " Balo MCM Brandenburg Backpack Visetos Black Like Auth",
+    name: "BALO MCM BRANDENBURG BACKPACK VISETOS BLACK LIKE AUTH",
+    brand: "MCM",
     price: 269000,
     originalPrice: 379000,
     images: [
@@ -288,6 +288,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviews: 178,
     description: "대용량 스포츠 더플백. 방수 소재로 제작되어 체육관이나 여행에 최적화되어 있습니다. 탈부착 가능한 어깨끈 포함.",
+    isNew: true,
     isBestSeller: true,
   },
   {
@@ -295,6 +296,7 @@ export const products: Product[] = [
     name: "프리미엄 크로스백",
     brand: "New Balance",
     price: 89000,
+    originalPrice: 115000,
     images: [bagSling, bagSling, bagSling, bagSling, bagSling, bagSling],
     category: "bags",
     sizes: [],
