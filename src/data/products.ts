@@ -18,6 +18,7 @@ import bagBackpack from "@/assets/bag-backpack-black.jpg";
 import bagDuffle from "@/assets/bag-duffle-white.jpg";
 import bagSling from "@/assets/bag-sling-brown.jpg";
 import bagTote from "@/assets/bag-tote-red.jpg";
+import bapeHoodie6 from "@/assets/bape-hoodie-6.jpg";
 
 export type Product = {
   id: string;
@@ -27,7 +28,7 @@ export type Product = {
   originalPrice?: number;
   images: string[];
   category: string;
-  sizes: number[];
+  sizes: (number | string)[];
   rating: number;
   reviews: number;
   description: string;
@@ -38,20 +39,20 @@ export type Product = {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Air Velocity Pro",
-    brand: "Nike",
+    name: "Hoodie BAPE like auth",
+    brand: "BAPE",
     price: 189000,
     originalPrice: 229000,
     images: [
-      shoeRunning,
-      "https://media-photos.depop.com/b1/48512469/3335686957_e42e4610d08c48c4a4ab1efa4c465f54/P0.jpg",
-      "https://media-photos.depop.com/r1/384435752/3460273877_7f8d8a97446f42ec8cd73a03f04c853d/P0.jpg",
-      "https://media-photos.depop.com/r1/384435752/3373002616_0b9b42798f23488e99ef4cb8d0ffc691/P0.jpg",
-      "https://media-photos.depop.com/b1/48512469/3335686958_7272ad544df648f4a410c90004ef1d00/P0.jpg",
-      "https://media-photos.depop.com/b1/431169500/3056642981_cb007306620541a0af84a811dc252251/P0.jpg"
+      "https://media-photos.depop.com/b1/431169500/3056642981_cb007306620541a0af84a811dc252251/P0.jpg",
+      "https://media-photos.depop.com/b1/431169500/3056642984_735bae534a4d4fa1b04c336615a019ed/P0.jpg",
+      "https://media-photos.depop.com/b1/431169500/3056642983_3729d8e3b25a4ad1b156062d55f9765a/P0.jpg",
+      "https://media-photos.depop.com/b1/431169500/3056642982_b97a0016ecb445849c196b14df30aaa7/P0.jpg",
+      "https://media-photos.depop.com/b1/431169500/3056642985_521f88daf67a4e47850300012164c27b/P0.jpg",
+      bapeHoodie6
     ],
-    category: "running",
-    sizes: [250, 255, 260, 265, 270, 275, 280],
+    category: "fashionwear",
+    sizes: ["M", "L", "XL", "2XL", "\n", "\n", "\n"],
     rating: 4.8,
     reviews: 234,
     description: "최첨단 에어 쿠셔닝 기술이 적용된 프리미엄 러닝화. 모든 러닝 스텝에서 최상의 편안함을 제공합니다. 통기성 뛰어난 경량 설계로 내구성이 우수합니다.",
