@@ -258,10 +258,17 @@ export const products: Product[] = [
   {
     id: "17",
     name: "스포츠 백팩 프로",
-    brand: "Nike",
-    price: 139000,
-    originalPrice: 179000,
-    images: [bagBackpack, bagBackpack, bagBackpack, bagBackpack, bagBackpack, bagBackpack],
+    brand: " Balo MCM Brandenburg Backpack Visetos Black Like Auth",
+    price: 269000,
+    originalPrice: 379000,
+    images: [
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-mcm-brandenburg-backpack-visetos-black.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-mcm-brandenburg-backpack-visetos-black-2.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-mcm-brandenburg-backpack-visetos-black-4.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-mcm-brandenburg-backpack-visetos-black-5.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-mcm-brandenburg-backpack-visetos-black-1.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-mcm-brandenburg-backpack-visetos-black-8.jpg"
+    ],
     category: "bags",
     sizes: [],
     rating: 4.8,
