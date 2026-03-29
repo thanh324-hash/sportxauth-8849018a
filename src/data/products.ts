@@ -257,8 +257,8 @@ export const products: Product[] = [
   // 가방 & 백팩
   {
     id: "17",
-    name: "스포츠 백팩 프로",
-    brand: " Balo MCM Brandenburg Backpack Visetos Black Like Auth",
+    name: "BALO MCM BRANDENBURG BACKPACK VISETOS BLACK LIKE AUTH",
+    brand: "MCM",
     price: 269000,
     originalPrice: 379000,
     images: [
