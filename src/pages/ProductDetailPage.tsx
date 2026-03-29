@@ -12,7 +12,7 @@ export default function ProductDetailPage() {
   const product = products.find((p) => p.id === id);
   const addItem = useCartStore((s) => s.addItem);
 
-  const [selectedSize, setSelectedSize] = useState<number | null>(null);
+  const [selectedSize, setSelectedSize] = useState<number | string | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
 

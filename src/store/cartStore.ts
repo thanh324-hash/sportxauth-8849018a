@@ -3,15 +3,15 @@ import { Product } from "@/data/products";
 
 export type CartItem = {
   product: Product;
-  size: number;
+  size: number | string;
   quantity: number;
 };
 
 type CartStore = {
   items: CartItem[];
-  addItem: (product: Product, size: number, quantity?: number) => void;
-  removeItem: (productId: string, size: number) => void;
-  updateQuantity: (productId: string, size: number, quantity: number) => void;
+  addItem: (product: Product, size: number | string, quantity?: number) => void;
+  removeItem: (productId: string, size: number | string) => void;
+  updateQuantity: (productId: string, size: number | string, quantity: number) => void;
   clearCart: () => void;
   totalItems: () => number;
   totalPrice: () => number;
