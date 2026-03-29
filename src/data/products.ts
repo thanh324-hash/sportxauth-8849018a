@@ -42,7 +42,14 @@ export const products: Product[] = [
     brand: "Nike",
     price: 189000,
     originalPrice: 229000,
-    images: [shoeRunning, shoeRunning, shoeRunning, shoeRunning, shoeRunning, shoeRunning],
+    images: [
+      shoeRunning,
+      "https://media-photos.depop.com/b1/48512469/3335686957_e42e4610d08c48c4a4ab1efa4c465f54/P0.jpg",
+      "https://media-photos.depop.com/r1/384435752/3460273877_7f8d8a97446f42ec8cd73a03f04c853d/P0.jpg",
+      "https://media-photos.depop.com/r1/384435752/3373002616_0b9b42798f23488e99ef4cb8d0ffc691/P0.jpg",
+      "https://media-photos.depop.com/b1/48512469/3335686958_7272ad544df648f4a410c90004ef1d00/P0.jpg",
+      "https://media-photos.depop.com/b1/431169500/3056642981_cb007306620541a0af84a811dc252251/P0.jpg"
+    ],
     category: "running",
     sizes: [250, 255, 260, 265, 270, 275, 280],
     rating: 4.8,
