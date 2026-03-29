@@ -1,5 +1,5 @@
 import shoeBasketball from "@/assets/shoe-basketball.jpg";
-import shoeRunning from "@/assets/shoe-running.png";
+import shoeRunning from "@/assets/shoe-nike-zoom.jpg";
 import shoeLifestyle from "@/assets/shoe-lifestyle.jpg";
 import shoeFashion from "@/assets/shoe-fashion.jpg";
 import shoeBlue from "@/assets/shoe-blue.jpg";
