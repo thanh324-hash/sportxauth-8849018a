@@ -164,7 +164,7 @@ export default function ProductDetailPage() {
             <div className="border-t border-border pt-6 mt-6">
               <h4 className="text-xs font-bold uppercase tracking-wider mb-3">배송 안내</h4>
               <ul className="text-sm text-muted-foreground space-y-1.5 leading-relaxed">
-                <li>🇰🇷 국내배송: 2-3일 (₩100,000 이상 무료)</li>
+                <li>주의: 고가 상품이며 주문 제작 상품으로 주문 후 취소가 불가합니다.</li>
                 <li>🌍 해외배송: 7-14일 (지역별 배송비 별도)</li>
                 <li>📦 교환/반품: 수령 후 30일 이내</li>
               </ul>

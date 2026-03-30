@@ -287,10 +287,17 @@ export const products: Product[] = [
   },
   {
     id: "18",
-    name: "더플백 클래식",
-    brand: "Adidas",
-    price: 119000,
-    images: [bagDuffle, bagDuffle, bagDuffle, bagDuffle, bagDuffle, bagDuffle],
+    name: "BaLo LV Christopher MM Monogram Eclipse Canvas Best Quality",
+    brand: "Louis Vuitton",
+    price: 769000,
+    images: [
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-christopher-mm-monogram-eclipse-canvas-nau-12.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-christopher-mm-monogram-eclipse-canvas-nau-18.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-christopher-mm-monogram-eclipse-canvas-nau-17.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-christopher-mm-monogram-eclipse-canvas-nau-15.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-christopher-mm-monogram-eclipse-canvas-nau-13.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-christopher-mm-monogram-eclipse-canvas-nau-1.jpg"
+    ],
     category: "bags",
     sizes: [],
     rating: 4.7,
