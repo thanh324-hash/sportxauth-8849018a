@@ -103,7 +103,7 @@ export default function ProductDetailPage() {
 
             {/* Size */}
             <div className="mb-8">
-              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">사이즈 선택 (mm)</h4>
+              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">사이즈 선택 (MM)               </h4>
               <div className="flex flex-wrap gap-2">
                 {product.sizes.map((s) => (
                   <button
