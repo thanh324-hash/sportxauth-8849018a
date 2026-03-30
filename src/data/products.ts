@@ -19,6 +19,11 @@ import bagDuffle from "@/assets/bag-duffle-white.jpg";
 import bagSling from "@/assets/bag-sling-brown.jpg";
 import bagTote from "@/assets/bag-tote-red.jpg";
 import bapeHoodie6 from "@/assets/bape-hoodie-6.jpg";
+import mlbSandal2 from "@/assets/mlb-sandal-2.png";
+import mlbSandal3 from "@/assets/mlb-sandal-3.png";
+import mlbSandal4 from "@/assets/mlb-sandal-4.png";
+import mlbSandal5 from "@/assets/mlb-sandal-5.png";
+import mlbSandal6 from "@/assets/mlb-sandal-6.png";
 
 export type Product = {
   id: string;
