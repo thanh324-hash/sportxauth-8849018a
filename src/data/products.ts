@@ -106,12 +106,19 @@ export const products: Product[] = [
   },
   {
     id: "5",
-    name: "Speed Runner Elite",
-    brand: "Puma",
+    name: "Sandal MLB Big Ball Chunky Mas New York Yankees Cream",
+    brand: "MLB",
     price: 229000,
-    images: [shoeBlue, shoeBlue, shoeBlue, shoeBlue, shoeBlue, shoeBlue],
+    images: [
+      "https://rollsneaker.vn/wp-content/uploads/2023/06/Sandal-MLB-Big-Ball-Chunky-Mas-New-York-Yankees-Cream-800x650.jpg",
+      mlbSandal2,
+      mlbSandal3,
+      mlbSandal4,
+      mlbSandal5,
+      mlbSandal6
+    ],
     category: "running",
-    sizes: [255, 260, 265, 270, 275, 280],
+    sizes: [37, 38, 39, 40, 41, 42],
     rating: 4.5,
     reviews: 98,
     description: "에어로다이나믹 디자인의 경량 러닝화. 속도에 최적화되어 있으며, 뛰어난 아웃솔 그립력을 자랑합니다.",
