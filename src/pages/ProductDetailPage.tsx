@@ -103,7 +103,7 @@ export default function ProductDetailPage() {
 
             {/* Size */}
             <div className="mb-8">
-              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">사이즈 선택 (MM)               </h4>
+              <h4 className="text-xs font-bold uppercase tracking-wider mb-3 text-destructive">주의: 고가 상품이며 주문 제작 상품으로 주문 후 취소가 불가합니다.</h4>
               <div className="flex flex-wrap gap-2">
                 {product.sizes.map((s) => (
                   <button

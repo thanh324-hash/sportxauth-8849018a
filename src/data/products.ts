@@ -308,11 +308,18 @@ export const products: Product[] = [
   },
   {
     id: "19",
-    name: "프리미엄 크로스백",
+    name: "Balo LV Utility Backpack Damier Graphite Canvas Black Best Quality",
     brand: "New Balance",
-    price: 89000,
-    originalPrice: 115000,
-    images: [bagSling, bagSling, bagSling, bagSling, bagSling, bagSling],
+    price: 890000,
+    originalPrice: 1255000,
+    images: [
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-utility-backpack-damier-graphite-canvas-black-2.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-utility-backpack-damier-graphite-canvas-black-8.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-utility-backpack-damier-graphite-canvas-black-7.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-utility-backpack-damier-graphite-canvas-black-1.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-utility-backpack-damier-graphite-canvas-black-21.jpg",
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-lv-utility-backpack-damier-graphite-canvas-black-13.jpg"
+    ],
     category: "bags",
     sizes: [],
     rating: 4.6,
