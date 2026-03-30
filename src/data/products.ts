@@ -339,7 +339,7 @@ export const products: Product[] = [
       "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-louis-vuitton-2019-monogram-reverse-palm-springs-mini-19.jpg",
       "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-louis-vuitton-2019-monogram-reverse-palm-springs-mini-4.jpg",
       "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-louis-vuitton-2019-monogram-reverse-palm-springs-mini-5.jpg",
-      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-louis-vuitton-2019-monogram-reverse-palm-springs-mini-18.jpg"
+      "https://rollsneaker.vn/wp-content/uploads/2023/11/balo-louis-vuitton-2019-monogram-reverse-palm-springs-mini-9.jpg"
     ],
     category: "bags",
     sizes: ["One Size"],
