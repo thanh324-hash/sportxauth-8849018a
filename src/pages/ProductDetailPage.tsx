@@ -48,27 +48,17 @@ export default function ProductDetailPage() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
+            className="flex flex-col gap-4"
           >
-            <div className="bg-secondary rounded-sm overflow-hidden mb-4 flex items-center justify-center">
-              <img
-                src={product.images[activeImage]}
-                alt={product.name}
-                className="w-full h-auto object-contain"
-              />
-            </div>
-            <div className="gap-3 flex items-start justify-start text-center border-solid">
-              {product.images.map((img, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveImage(i)}
-                  className={`w-20 h-20 rounded-sm overflow-hidden border-2 transition-colors ${
-                    activeImage === i ? "border-accent" : "border-transparent"
-                  }`}
-                >
-                  <img src={img} alt="" className="w-full h-full object-contain bg-secondary" />
-                </button>
-              ))}
-            </div>
+            {product.images.map((img, i) => (
+              <div key={i} className="bg-secondary rounded-sm overflow-hidden flex items-center justify-center">
+                <img
+                  src={img}
+                  alt={`${product.name} - ${i + 1}`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            ))}
           </motion.div>
 
           {/* Info */}
