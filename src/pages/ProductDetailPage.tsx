@@ -49,11 +49,11 @@ export default function ProductDetailPage() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <div className="aspect-square bg-secondary rounded-sm overflow-hidden mb-4">
+            <div className="bg-secondary rounded-sm overflow-hidden mb-4 flex items-center justify-center">
               <img
                 src={product.images[activeImage]}
                 alt={product.name}
-                className="w-full h-full object-fill"
+                className="w-full h-auto object-contain"
               />
             </div>
             <div className="gap-3 flex items-start justify-start text-center border-solid">
@@ -65,7 +65,7 @@ export default function ProductDetailPage() {
                     activeImage === i ? "border-accent" : "border-transparent"
                   }`}
                 >
-                  <img src={img} alt="" className="w-full h-full object-cover" />
+                  <img src={img} alt="" className="w-full h-full object-contain bg-secondary" />
                 </button>
               ))}
             </div>
