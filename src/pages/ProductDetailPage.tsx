@@ -56,7 +56,7 @@ export default function ProductDetailPage() {
                 className="w-full h-full object-fill"
               />
             </div>
-            <div className="flex gap-3">
+            <div className="gap-3 flex items-start justify-start text-center border-solid">
               {product.images.map((img, i) => (
                 <button
                   key={i}
