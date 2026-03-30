@@ -65,7 +65,7 @@ export default function ProductDetailPage() {
                     activeImage === i ? "border-accent" : "border-transparent"
                   }`}
                 >
-                  <img src={img} alt="" className="w-full h-full object-cover" />
+                  <img src={img} alt="" className="w-full h-full object-contain bg-secondary" />
                 </button>
               ))}
             </div>
