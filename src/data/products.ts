@@ -107,7 +107,7 @@ export const products: Product[] = [
   {
     id: "5",
     name: "Sandal MLB Big Ball Chunky Mas New York Yankees Cream",
-    brand: "MLB",
+    brand: "Sandal MLB",
     price: 229000,
     images: [
       "https://rollsneaker.vn/wp-content/uploads/2023/06/Sandal-MLB-Big-Ball-Chunky-Mas-New-York-Yankees-Cream-800x650.jpg",
