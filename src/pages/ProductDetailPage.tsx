@@ -43,147 +43,145 @@ export default function ProductDetailPage() {
           <ChevronLeft className="w-4 h-4" /> 쇼핑으로 돌아가기
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Images */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
-            {/* Main image */}
-            <div className="bg-secondary rounded-sm overflow-hidden mb-4 flex items-center justify-center">
+        {/* Section 1: Main image + 6 thumbnails */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <div className="bg-secondary rounded-sm overflow-hidden mb-4 flex items-center justify-center">
+            <img
+              src={product.images[activeImage]}
+              alt={product.name}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="gap-3 flex items-start justify-start text-center border-solid mb-8 flex-wrap">
+            {product.images.map((img, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveImage(i)}
+                className={`w-20 h-20 rounded-sm overflow-hidden border-2 transition-colors ${
+                  activeImage === i ? "border-accent" : "border-transparent"
+                }`}
+              >
+                <img src={img} alt="" className="w-full h-full object-contain bg-secondary" />
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Section 2: Product info */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="mb-12"
+        >
+          <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">{product.brand}</p>
+          <h1 className="font-display sm:text-5xl mb-4 text-sm">{product.name}</h1>
+
+          <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-1">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-accent text-accent" : "text-border"}`}
+                />
+              ))}
+            </div>
+            <span className="text-sm text-muted-foreground">({product.reviews} 리뷰)</span>
+          </div>
+
+          <div className="flex items-center gap-3 mb-8">
+            <span className="font-display text-3xl">{formatPrice(product.price)}</span>
+            {product.originalPrice && (
+              <span className="text-lg text-muted-foreground line-through">
+                {formatPrice(product.originalPrice)}
+              </span>
+            )}
+          </div>
+
+          {/* Size */}
+          <div className="mb-8">
+            <h4 className="text-xs font-bold uppercase tracking-wider mb-3 text-destructive">주의: 고가 상품이며 주문 제작 상품으로 주문 후 취소가 불가합니다.</h4>
+            <div className="flex flex-wrap gap-2">
+              {product.sizes.map((s) => (
+                <button
+                  key={s}
+                  onClick={() => setSelectedSize(s)}
+                  className={`w-14 h-12 flex items-center justify-center text-sm font-medium rounded-sm transition-colors ${
+                    selectedSize === s
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-secondary hover:bg-secondary/80"
+                  }`}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Quantity */}
+          <div className="mb-8">
+            <h4 className="text-xs font-bold uppercase tracking-wider mb-3">수량</h4>
+            <div className="flex items-center border border-border rounded-sm w-fit">
+              <button
+                onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                className="p-3 hover:bg-secondary transition-colors"
+              >
+                <Minus className="w-4 h-4" />
+              </button>
+              <span className="px-6 text-sm font-medium">{quantity}</span>
+              <button
+                onClick={() => setQuantity(quantity + 1)}
+                className="p-3 hover:bg-secondary transition-colors"
+              >
+                <Plus className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Actions */}
+          <div className="flex gap-3 mb-10">
+            <button
+              onClick={handleAddToCart}
+              className="flex-1 flex items-center justify-center gap-2 bg-accent text-accent-foreground py-4 font-medium text-sm uppercase tracking-wider hover:bg-accent/90 transition-colors"
+            >
+              <ShoppingBag className="w-4 h-4" /> 장바구니에 담기
+            </button>
+            <button className="p-4 border border-border hover:bg-secondary rounded-sm transition-colors">
+              <Heart className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Description */}
+          <div className="border-t border-border pt-8">
+            <h4 className="text-xs font-bold uppercase tracking-wider mb-3">상품 설명</h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
+          </div>
+
+          {/* Shipping Info */}
+          <div className="border-t border-border pt-6 mt-6">
+            <h4 className="text-xs font-bold uppercase tracking-wider mb-3">배송 안내</h4>
+            <ul className="text-sm text-muted-foreground space-y-1.5 leading-relaxed">
+              <li>주의: 고가 상품이며 주문 제작 상품으로 주문 후 취소가 불가합니다.</li>
+              <li>🌍 해외배송: 7-14일 (지역별 배송비 별도)</li>
+              <li>📦 교환/반품: 수령 후 30일 이내</li>
+            </ul>
+          </div>
+        </motion.div>
+
+        {/* Section 3: All images stacked */}
+        <div className="flex flex-col gap-4 mb-12">
+          {product.images.map((img, i) => (
+            <div key={i} className="bg-secondary rounded-sm overflow-hidden flex items-center justify-center">
               <img
-                src={product.images[activeImage]}
-                alt={product.name}
+                src={img}
+                alt={`${product.name} - ${i + 1}`}
                 className="w-full h-auto object-contain"
               />
             </div>
-            {/* Thumbnails */}
-            <div className="gap-3 flex items-start justify-start text-center border-solid mb-8">
-              {product.images.map((img, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveImage(i)}
-                  className={`w-20 h-20 rounded-sm overflow-hidden border-2 transition-colors ${
-                    activeImage === i ? "border-accent" : "border-transparent"
-                  }`}
-                >
-                  <img src={img} alt="" className="w-full h-full object-contain bg-secondary" />
-                </button>
-              ))}
-            </div>
-            {/* All images stacked */}
-            <div className="flex flex-col gap-4">
-              {product.images.map((img, i) => (
-                <div key={i} className="bg-secondary rounded-sm overflow-hidden flex items-center justify-center">
-                  <img
-                    src={img}
-                    alt={`${product.name} - ${i + 1}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <p className="text-sm text-muted-foreground uppercase tracking-widest mb-1">{product.brand}</p>
-            <h1 className="font-display sm:text-5xl mb-4 text-sm">{product.name}</h1>
-
-            <div className="flex items-center gap-3 mb-6">
-              <div className="flex items-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-accent text-accent" : "text-border"}`}
-                  />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground">({product.reviews} 리뷰)</span>
-            </div>
-
-            <div className="flex items-center gap-3 mb-8">
-              <span className="font-display text-3xl">{formatPrice(product.price)}</span>
-              {product.originalPrice && (
-                <span className="text-lg text-muted-foreground line-through">
-                  {formatPrice(product.originalPrice)}
-                </span>
-              )}
-            </div>
-
-            {/* Size */}
-            <div className="mb-8">
-              <h4 className="text-xs font-bold uppercase tracking-wider mb-3 text-destructive">주의: 고가 상품이며 주문 제작 상품으로 주문 후 취소가 불가합니다.</h4>
-              <div className="flex flex-wrap gap-2">
-                {product.sizes.map((s) => (
-                  <button
-                    key={s}
-                    onClick={() => setSelectedSize(s)}
-                    className={`w-14 h-12 flex items-center justify-center text-sm font-medium rounded-sm transition-colors ${
-                      selectedSize === s
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-secondary hover:bg-secondary/80"
-                    }`}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Quantity */}
-            <div className="mb-8">
-              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">수량</h4>
-              <div className="flex items-center border border-border rounded-sm w-fit">
-                <button
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="p-3 hover:bg-secondary transition-colors"
-                >
-                  <Minus className="w-4 h-4" />
-                </button>
-                <span className="px-6 text-sm font-medium">{quantity}</span>
-                <button
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="p-3 hover:bg-secondary transition-colors"
-                >
-                  <Plus className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
-            {/* Actions */}
-            <div className="flex gap-3 mb-10">
-              <button
-                onClick={handleAddToCart}
-                className="flex-1 flex items-center justify-center gap-2 bg-accent text-accent-foreground py-4 font-medium text-sm uppercase tracking-wider hover:bg-accent/90 transition-colors"
-              >
-                <ShoppingBag className="w-4 h-4" /> 장바구니에 담기
-              </button>
-              <button className="p-4 border border-border hover:bg-secondary rounded-sm transition-colors">
-                <Heart className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Description */}
-            <div className="border-t border-border pt-8">
-              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">상품 설명</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
-            </div>
-
-            {/* Shipping Info */}
-            <div className="border-t border-border pt-6 mt-6">
-              <h4 className="text-xs font-bold uppercase tracking-wider mb-3">배송 안내</h4>
-              <ul className="text-sm text-muted-foreground space-y-1.5 leading-relaxed">
-                <li>주의: 고가 상품이며 주문 제작 상품으로 주문 후 취소가 불가합니다.</li>
-                <li>🌍 해외배송: 7-14일 (지역별 배송비 별도)</li>
-                <li>📦 교환/반품: 수령 후 30일 이내</li>
-              </ul>
-            </div>
-          </motion.div>
+          ))}
         </div>
 
         {/* Related Products */}
