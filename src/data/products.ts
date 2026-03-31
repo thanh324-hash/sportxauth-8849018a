@@ -24,6 +24,8 @@ import mlbSandal3 from "@/assets/mlb-sandal-3.png";
 import mlbSandal4 from "@/assets/mlb-sandal-4.png";
 import mlbSandal5 from "@/assets/mlb-sandal-5.png";
 import mlbSandal6 from "@/assets/mlb-sandal-6.png";
+import killBill2 from "@/assets/9bea1607-41e0-4f16-a3f0-f4d6fd218ecf.png";
+import killBill3 from "@/assets/061c5180-2cc9-4f1f-bca7-e8dfa5896633.png";
 
 export type Product = {
   id: string;
@@ -126,12 +128,19 @@ export const products: Product[] = [
   },
   {
     id: "6",
-    name: "Fresh Foam Trail",
-    brand: "New Balance",
-    price: 169000,
-    images: [shoeGreen, shoeGreen, shoeGreen, shoeGreen, shoeGreen, shoeGreen],
+    name: "Onitsuka Tiger Mexico 66 Kill Bill ",
+    brand: "Onitsuka Tiger",
+    price: 180000,
+    images: [
+      "https://giaysneakerhcm.com/wp-content/uploads/2024/01/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-Vang-Den-Sieu-Cap-1.jpg",
+      killBill2,
+      killBill3,
+      "https://giaysneakerhcm.com/wp-content/uploads/2024/01/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-Vang-Den-Rep-11-9.jpg",
+      "https://giaysneakerhcm.com/wp-content/uploads/2024/01/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-Vang-Den-Rep-11-7.jpg",
+      "https://giaysneakerhcm.com/wp-content/uploads/2024/01/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-Vang-Den-Sieu-Cap-1-600x400.jpg"
+    ],
     category: "running",
-    sizes: [260, 265, 270, 275, 280],
+    sizes: ["36-38", 39, 40, 41, "42-43"],
     rating: 4.7,
     reviews: 145,
     description: "부드러운 Fresh Foam 쿠셔닝의 트레일 러닝화. 모든 지형에서 발을 보호하며, 내구성과 방수 기능이 뛰어납니다.",
