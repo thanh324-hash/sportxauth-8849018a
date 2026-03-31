@@ -24,6 +24,8 @@ import mlbSandal3 from "@/assets/mlb-sandal-3.png";
 import mlbSandal4 from "@/assets/mlb-sandal-4.png";
 import mlbSandal5 from "@/assets/mlb-sandal-5.png";
 import mlbSandal6 from "@/assets/mlb-sandal-6.png";
+import killBill2 from "@/assets/9bea1607-41e0-4f16-a3f0-f4d6fd218ecf.png";
+import killBill3 from "@/assets/061c5180-2cc9-4f1f-bca7-e8dfa5896633.png";
 
 export type Product = {
   id: string;
