@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { products, categories, formatPrice } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
-import heroShoe from "@/assets/hero-shoe.jpg";
+import heroBannerBg from "@/assets/hero-banner-bg.jpg";
+import heroShoeDunk from "@/assets/hero-shoe-nike-dunk.png";
 import promoBanner from "@/assets/promo-banner.jpg";
 
 const bestSellers = products.filter((p) => p.isBestSeller);
