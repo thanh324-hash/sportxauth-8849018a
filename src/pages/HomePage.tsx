@@ -34,6 +34,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="max-w-xl"
           >
+            <p className="text-accent/60 font-display text-xs tracking-[0.3em] mb-4">SPORTXAUTH</p>
             <p className="text-accent font-display text-xl tracking-widest mb-2">
               2026 NEW COLLECTION
             </p>
