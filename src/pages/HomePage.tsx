@@ -22,18 +22,11 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative h-[85vh] min-h-[600px] bg-sport-dark overflow-hidden">
         <img
-          src={heroBannerBg}
-          alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-sport-dark/70 via-transparent to-transparent" />
-        <img
           src={heroShoeDunk}
-          alt="Nike Dunk"
-          className="absolute right-0 bottom-0 w-[55%] max-w-[700px] object-contain drop-shadow-2xl"
+          alt="Hero"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-sport-dark/90 via-sport-dark/50 to-transparent" />
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -41,6 +34,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="max-w-xl"
           >
+            <p className="text-accent/60 font-display text-xs tracking-[0.3em] mb-4">SPORTXAUTH</p>
             <p className="text-accent font-display text-xl tracking-widest mb-2">
               2026 NEW COLLECTION
             </p>
