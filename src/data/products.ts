@@ -132,12 +132,12 @@ export const products: Product[] = [
     brand: "Onitsuka Tiger",
     price: 180000,
     images: [
-      "https://giaysneakerhcm.com/wp-content/uploads/2024/01/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-Vang-Den-Sieu-Cap-1.jpg",
+      "https://authentic-shoes.com/wp-content/uploads/2024/03/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-DL408-0490-1-600x241.png",
       killBill2,
       killBill3,
-      "https://giaysneakerhcm.com/wp-content/uploads/2024/01/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-Vang-Den-Rep-11-9.jpg",
-      "https://giaysneakerhcm.com/wp-content/uploads/2024/01/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-Vang-Den-Rep-11-7.jpg",
-      "https://giaysneakerhcm.com/wp-content/uploads/2024/01/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-Vang-Den-Sieu-Cap-1-600x400.jpg"
+      "https://authentic-shoes.com/wp-content/uploads/2024/03/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-DL408-0490-10-600x565.png",
+      "https://authentic-shoes.com/wp-content/uploads/2024/03/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-DL408-0490-9-600x565.png",
+      "https://authentic-shoes.com/wp-content/uploads/2024/03/Giay-Onitsuka-Tiger-Mexico-66-Kill-Bill-DL408-0490-11-600x514.png"
     ],
     category: "running",
     sizes: ["36-38", 39, 40, 41, "42-43"],
