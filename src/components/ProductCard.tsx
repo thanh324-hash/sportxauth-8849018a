@@ -16,12 +16,12 @@ export default function ProductCard({ product, index = 0 }: Props) {
       viewport={{ once: true }}
       transition={{ delay: index * 0.05, duration: 0.4 }}
     >
-      <Link to={`/product/${product.id}`} className="group block">
-        <div className="relative overflow-hidden bg-secondary rounded-sm mb-3 flex items-center justify-center">
+      <Link to={`/product/${product.id}`} className="group block h-full flex flex-col">
+        <div className="relative overflow-hidden bg-secondary rounded-sm mb-3 flex items-center justify-center aspect-square">
           <img
             src={product.images[0]}
             alt={product.name}
-            className="w-full h-auto object-contain group-hover:scale-110 transition-transform duration-500"
+            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
           />
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-1">
