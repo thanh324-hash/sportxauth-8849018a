@@ -81,12 +81,19 @@ export const products: Product[] = [
   },
   {
     id: "3",
-    name: "Urban Shadow",
-    brand: "Adidas",
+    name: "Converse Chuck Taylor All Star Classic CreamWhite",
+    brand: "Converse",
     price: 159000,
-    images: [shoeLifestyle, shoeLifestyle, shoeLifestyle, shoeLifestyle, shoeLifestyle, shoeLifestyle],
+    images: [
+      "https://xamsneaker.com/wp-content/uploads/Giay-Converse-Chuck-Taylor-All-Star-Classic-Cream-Low-White-2-1024x1024.jpg",
+      "https://xamsneaker.com/wp-content/uploads/Giay-Converse-Chuck-Taylor-All-Star-Classic-Cream-Low-White-7-1024x1024.jpg",
+      "https://xamsneaker.com/wp-content/uploads/Giay-Converse-Chuck-Taylor-All-Star-Classic-Cream-Low-White-6-1024x1024.jpg",
+      "https://xamsneaker.com/wp-content/uploads/Giay-Converse-Chuck-Taylor-All-Star-Classic-Cream-Low-White-8-1024x1024.jpg",
+      "https://xamsneaker.com/wp-content/uploads/Giay-Converse-Chuck-Taylor-All-Star-Classic-Cream-Low-White-5-1024x1024.jpg",
+      "https://xamsneaker.com/wp-content/uploads/Giay-Converse-Chuck-Taylor-All-Star-Classic-Cream-Low-White-3-1024x1024.jpg"
+    ],
     category: "lifestyle",
-    sizes: [250, 255, 260, 265, 270, 275],
+    sizes: ["36-39", "40", "41", "42", "43", "43"],
     rating: 4.7,
     reviews: 312,
     description: "미니멀한 스트릿 스타일의 라이프스타일 신발. 어떤 의상에도 잘 어울립니다. Boost 쿠셔닝으로 하루 종일 편안합니다.",
