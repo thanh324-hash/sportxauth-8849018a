@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { products, formatPrice } from "@/data/products";
+import { products, categories, formatPrice } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
+import heroBannerBg from "@/assets/hero-banner-bg.jpg";
 import heroShoeDunk from "@/assets/hero-shoe-nike-dunk.png";
 import promoBanner from "@/assets/promo-banner.jpg";
-const shoeCategories = ["running", "basketball", "lifestyle", "fashion"];
-const allShoes = products.filter((p) => shoeCategories.includes(p.category));
-const sportswear = products.filter((p) => p.category === "sportswear");
-const fashionwear = products.filter((p) => p.category === "fashionwear");
-const bags = products.filter((p) => p.category === "bags");
+
+const bestSellers = products.filter((p) => p.isBestSeller);
+const newArrivals = products.filter((p) => p.isNew);
 
 const reviews = [
   { name: "김민수", rating: 5, text: "정품 보장에 품질도 최고입니다. 배송도 빠르고 포장도 꼼꼼해요!" },
@@ -64,69 +63,88 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* All Shoes */}
+      {/* Categories */}
       <section className="py-20">
         <div className="container mx-auto px-4">
+          <h2 className="font-display text-4xl text-center mb-12 tracking-wider">
+            인기 카테고리
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {categories.map((cat, i) => (
+              <motion.div
+                key={cat.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <Link
+                  to={`/shop?category=${cat.id}`}
+                  className="block bg-secondary hover:bg-secondary/80 p-8 text-center group transition-colors rounded-sm"
+                >
+                  <span className="text-4xl mb-3 block">{cat.icon}</span>
+                  <h3 className="font-display text-lg tracking-wider group-hover:text-accent transition-colors">
+                    {cat.name}
+                  </h3>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Best Sellers */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="font-display text-4xl tracking-wider">신발 컬렉션</h2>
+            <h2 className="font-display text-4xl tracking-wider">베스트셀러</h2>
             <Link to="/shop" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
               전체 보기 <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {allShoes.map((p, i) => (
+            {bestSellers.map((p, i) => (
               <ProductCard key={p.id} product={p} index={i} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Sportswear */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="font-display text-4xl tracking-wider">스포츠 유니폼</h2>
-            <Link to="/shop?category=sportswear" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
-              전체 보기 <ArrowRight className="w-4 h-4" />
+      {/* Promo Banner */}
+      <section className="relative h-[400px] overflow-hidden">
+        <img src={promoBanner} alt="프로모션" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-primary/60" />
+        <div className="relative h-full container mx-auto px-4 flex items-center justify-center text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-accent font-display text-xl tracking-widest mb-2">특별 프로모션</p>
+            <h2 className="font-display text-5xl sm:text-7xl text-primary-foreground mb-6">
+              최대 50% 할인
+            </h2>
+            <Link
+              to="/shop"
+              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-3.5 font-medium text-sm uppercase tracking-wider hover:bg-accent/90 transition-colors"
+            >
+              지금 구매 <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {sportswear.map((p, i) => (
-              <ProductCard key={p.id} product={p} index={i} />
-            ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Fashionwear */}
+      {/* New Arrivals */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="font-display text-4xl tracking-wider">정품 패션 의류</h2>
-            <Link to="/shop?category=fashionwear" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
+            <h2 className="font-display text-4xl tracking-wider">신상품</h2>
+            <Link to="/shop" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
               전체 보기 <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {fashionwear.map((p, i) => (
-              <ProductCard key={p.id} product={p} index={i} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bags */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="font-display text-4xl tracking-wider">가방 & 백팩</h2>
-            <Link to="/shop?category=bags" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
-              전체 보기 <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {bags.map((p, i) => (
+            {newArrivals.map((p, i) => (
               <ProductCard key={p.id} product={p} index={i} />
             ))}
           </div>
