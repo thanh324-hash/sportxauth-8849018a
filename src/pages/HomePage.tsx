@@ -125,6 +125,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Sportswear */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <h2 className="font-display text-4xl tracking-wider">스포츠 유니폼</h2>
+            <Link to="/shop?category=sportswear" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
+              전체 보기 <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {sportswear.map((p, i) => (
+              <ProductCard key={p.id} product={p} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fashionwear */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <h2 className="font-display text-4xl tracking-wider">정품 패션 의류</h2>
+            <Link to="/shop?category=fashionwear" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
+              전체 보기 <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {fashionwear.map((p, i) => (
+              <ProductCard key={p.id} product={p} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bags */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <h2 className="font-display text-4xl tracking-wider">가방 & 백팩</h2>
+            <Link to="/shop?category=bags" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
+              전체 보기 <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {bags.map((p, i) => (
+              <ProductCard key={p.id} product={p} index={i} />
+            ))}
+          </div>
+        </div>
+
       {/* Reviews */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
