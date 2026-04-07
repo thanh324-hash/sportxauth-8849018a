@@ -90,30 +90,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Brand Logos - sub-navigation inside shoe section */}
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-10">
-            {brandLogos.map((brand, i) => (
-              <motion.div
-                key={brand.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <Link
-                  to={brand.link}
-                  className="block bg-secondary hover:bg-secondary/80 p-4 text-center group transition-all rounded-sm hover:shadow-lg"
-                >
-                  <img
-                    src={brand.image}
-                    alt={brand.name}
-                    className="h-10 w-auto mx-auto object-contain grayscale group-hover:grayscale-0 transition-all"
-                  />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {allShoes.map((p, i) => (
               <ProductCard key={p.id} product={p} index={i} />
