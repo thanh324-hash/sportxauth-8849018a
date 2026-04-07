@@ -5,8 +5,11 @@ import { products, formatPrice } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import heroShoeDunk from "@/assets/hero-shoe-nike-dunk.png";
 import promoBanner from "@/assets/promo-banner.jpg";
-
 const shoeCategories = ["running", "basketball", "lifestyle", "fashion"];
+const allShoes = products.filter((p) => shoeCategories.includes(p.category));
+const sportswear = products.filter((p) => p.category === "sportswear");
+const fashionwear = products.filter((p) => p.category === "fashionwear");
+const bags = products.filter((p) => p.category === "bags");
 
 const reviews = [
   { name: "김민수", rating: 5, text: "정품 보장에 품질도 최고입니다. 배송도 빠르고 포장도 꼼꼼해요!" },
