@@ -175,7 +175,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-        </div>
 
       {/* Reviews */}
       <section className="py-20 bg-secondary">
