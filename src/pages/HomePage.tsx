@@ -80,10 +80,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Brand Logos */}
-      <section className="py-12 bg-secondary">
+      {/* All Shoes */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
+          <div className="flex items-center justify-between mb-12">
+            <h2 className="font-display text-4xl tracking-wider">신발 컬렉션</h2>
+            <Link to="/shop" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
+              전체 보기 <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Brand Logos - sub-navigation inside shoe section */}
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-10">
             {brandLogos.map((brand, i) => (
               <motion.div
                 key={brand.name}
@@ -94,29 +102,18 @@ export default function HomePage() {
               >
                 <Link
                   to={brand.link}
-                  className="block bg-background hover:bg-background/80 p-6 text-center group transition-all rounded-sm hover:shadow-lg"
+                  className="block bg-secondary hover:bg-secondary/80 p-4 text-center group transition-all rounded-sm hover:shadow-lg"
                 >
                   <img
                     src={brand.image}
                     alt={brand.name}
-                    className="h-12 w-auto mx-auto object-contain grayscale group-hover:grayscale-0 transition-all"
+                    className="h-10 w-auto mx-auto object-contain grayscale group-hover:grayscale-0 transition-all"
                   />
                 </Link>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* All Shoes */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="font-display text-4xl tracking-wider">신발 컬렉션</h2>
-            <Link to="/shop" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
-              전체 보기 <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {allShoes.map((p, i) => (
               <ProductCard key={p.id} product={p} index={i} />
