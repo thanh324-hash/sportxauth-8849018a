@@ -14,6 +14,9 @@ import brandNewBalance from "@/assets/brand-newbalance.png";
 
 const shoeCategories = ["running", "basketball", "lifestyle", "fashion"];
 const allShoes = products.filter((p) => shoeCategories.includes(p.category));
+const sportswear = products.filter((p) => p.category === "sportswear");
+const fashionwear = products.filter((p) => p.category === "fashionwear");
+const bags = products.filter((p) => p.category === "bags");
 
 const brandLogos = [
   { name: "Nike", image: brandNike, link: "/shop?brand=Nike" },
