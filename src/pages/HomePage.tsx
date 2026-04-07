@@ -5,27 +5,11 @@ import { products, formatPrice } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import heroShoeDunk from "@/assets/hero-shoe-nike-dunk.png";
 import promoBanner from "@/assets/promo-banner.jpg";
-import brandNike from "@/assets/brand-nike.png";
-import brandAdidas from "@/assets/brand-adidas.png";
-import brandMlb from "@/assets/brand-mlb.png";
-import brandConverse from "@/assets/brand-converse.png";
-import brandVans from "@/assets/brand-vans.png";
-import brandNewBalance from "@/assets/brand-newbalance.png";
-
 const shoeCategories = ["running", "basketball", "lifestyle", "fashion"];
 const allShoes = products.filter((p) => shoeCategories.includes(p.category));
 const sportswear = products.filter((p) => p.category === "sportswear");
 const fashionwear = products.filter((p) => p.category === "fashionwear");
 const bags = products.filter((p) => p.category === "bags");
-
-const brandLogos = [
-  { name: "Nike", image: brandNike, link: "/shop?brand=Nike" },
-  { name: "Adidas", image: brandAdidas, link: "/shop?brand=Adidas" },
-  { name: "MLB", image: brandMlb, link: "/shop?brand=Sandal MLB" },
-  { name: "Converse", image: brandConverse, link: "/shop?brand=Converse" },
-  { name: "Vans", image: brandVans, link: "/shop?brand=Vans" },
-  { name: "New Balance", image: brandNewBalance, link: "/shop?brand=New Balance" },
-];
 
 const reviews = [
   { name: "김민수", rating: 5, text: "정품 보장에 품질도 최고입니다. 배송도 빠르고 포장도 꼼꼼해요!" },
@@ -88,30 +72,6 @@ export default function HomePage() {
             <Link to="/shop" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
               전체 보기 <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
-
-          {/* Brand Logos - sub-navigation inside shoe section */}
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-10">
-            {brandLogos.map((brand, i) => (
-              <motion.div
-                key={brand.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <Link
-                  to={brand.link}
-                  className="block bg-secondary hover:bg-secondary/80 p-4 text-center group transition-all rounded-sm hover:shadow-lg"
-                >
-                  <img
-                    src={brand.image}
-                    alt={brand.name}
-                    className="h-10 w-auto mx-auto object-contain grayscale group-hover:grayscale-0 transition-all"
-                  />
-                </Link>
-              </motion.div>
-            ))}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
