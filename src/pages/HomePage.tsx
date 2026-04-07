@@ -1,14 +1,28 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { products, categories, formatPrice } from "@/data/products";
+import { products, formatPrice } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
-import heroBannerBg from "@/assets/hero-banner-bg.jpg";
 import heroShoeDunk from "@/assets/hero-shoe-nike-dunk.png";
 import promoBanner from "@/assets/promo-banner.jpg";
+import brandNike from "@/assets/brand-nike.png";
+import brandAdidas from "@/assets/brand-adidas.png";
+import brandMlb from "@/assets/brand-mlb.png";
+import brandConverse from "@/assets/brand-converse.png";
+import brandVans from "@/assets/brand-vans.png";
+import brandNewBalance from "@/assets/brand-newbalance.png";
 
-const bestSellers = products.filter((p) => p.isBestSeller);
-const newArrivals = products.filter((p) => p.isNew);
+const shoeCategories = ["running", "basketball", "lifestyle", "fashion"];
+const allShoes = products.filter((p) => shoeCategories.includes(p.category));
+
+const brandLogos = [
+  { name: "Nike", image: brandNike, link: "/shop?brand=Nike" },
+  { name: "Adidas", image: brandAdidas, link: "/shop?brand=Adidas" },
+  { name: "MLB", image: brandMlb, link: "/shop?brand=Sandal MLB" },
+  { name: "Converse", image: brandConverse, link: "/shop?brand=Converse" },
+  { name: "Vans", image: brandVans, link: "/shop?brand=Vans" },
+  { name: "New Balance", image: brandNewBalance, link: "/shop?brand=New Balance" },
+];
 
 const reviews = [
   { name: "김민수", rating: 5, text: "정품 보장에 품질도 최고입니다. 배송도 빠르고 포장도 꼼꼼해요!" },
