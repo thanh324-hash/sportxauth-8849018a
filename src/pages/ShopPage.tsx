@@ -29,20 +29,22 @@ export default function ShopPage() {
       if (search && !p.name.toLowerCase().includes(search.toLowerCase()) && !p.brand.toLowerCase().includes(search.toLowerCase())) return false;
       if (selectedBrand && p.brand !== selectedBrand) return false;
       if (selectedCategory && p.category !== selectedCategory) return false;
+      if (selectedSubBrand && p.brand.toUpperCase() !== selectedSubBrand) return false;
       const range = priceRanges[selectedPrice];
       if (p.price < range.min || p.price > range.max) return false;
       return true;
     });
-  }, [search, selectedBrand, selectedCategory, selectedPrice]);
+  }, [search, selectedBrand, selectedCategory, selectedSubBrand, selectedPrice]);
 
   const clearFilters = () => {
     setSearch("");
     setSelectedBrand("");
     setSelectedCategory("");
+    setSelectedSubBrand("");
     setSelectedPrice(0);
   };
 
-  const hasFilters = search || selectedBrand || selectedCategory || selectedPrice > 0;
+  const hasFilters = search || selectedBrand || selectedCategory || selectedSubBrand || selectedPrice > 0;
 
   return (
     <div className="min-h-screen">
