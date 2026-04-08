@@ -83,6 +83,36 @@ export default function ShopPage() {
           )}
         </div>
 
+        {/* Sub-brand tabs for shoes */}
+        {selectedCategory === "shoes" && (
+          <div className="flex items-center gap-2 mb-8 overflow-x-auto pb-2">
+            <button
+              onClick={() => setSelectedSubBrand("")}
+              className={`px-4 py-2 text-sm font-medium rounded-sm whitespace-nowrap transition-colors ${
+                !selectedSubBrand
+                  ? "bg-accent text-accent-foreground"
+                  : "bg-secondary hover:bg-secondary/80"
+              }`}
+            >
+              전체
+            </button>
+            {shoeSubBrands.map((sb) => (
+              <button
+                key={sb}
+                onClick={() => setSelectedSubBrand(selectedSubBrand === sb ? "" : sb)}
+                className={`px-4 py-2 text-sm font-medium rounded-sm whitespace-nowrap transition-colors ${
+                  selectedSubBrand === sb
+                    ? "bg-accent text-accent-foreground"
+                    : "bg-secondary hover:bg-secondary/80"
+                }`}
+              >
+                {sb}
+              </button>
+            ))}
+          </div>
+        )}
+
+
         {/* Filters */}
         <AnimatePresence>
           {showFilters && (
