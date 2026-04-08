@@ -594,6 +594,147 @@ export const products: Product[] = [
     description: "LV 모노그램 캔버스의 키팔 반둘리에르 45. 여행용 더플백으로 최적이며, 탈부착 가능한 어깨끈과 넉넉한 수납공간을 제공합니다.",
     isNew: true,
   },
+  // ===== DIOR SHOES =====
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: `dior-${i + 1}`,
+    name: [
+      "Dior B22 Sneaker White", "Dior B23 High Top Oblique", "Dior B30 Sneaker Cream",
+      "Dior B27 Low Top White", "Dior B101 Sneaker Black", "Dior B22 Blue Technical",
+      "Dior B23 Low Top Canvas", "Dior B30 Gray Mesh", "Dior Walk'n'Dior Sneaker",
+      "Dior B27 Mid Top Beige"
+    ][i],
+    brand: "DIOR",
+    price: [2890000, 2590000, 2790000, 2490000, 2690000, 2890000, 2390000, 2790000, 1990000, 2590000][i],
+    images: [`https://placehold.co/600x600/1a1a1a/ffffff?text=DIOR+${i + 1}`],
+    category: "shoes",
+    sizes: shoeSizes,
+    rating: 4.8,
+    reviews: Math.floor(Math.random() * 200) + 50,
+    description: "Dior 정품 스니커즈. 최고급 소재와 장인 정신이 담긴 럭셔리 신발입니다.",
+    isNew: i < 3,
+  })),
+
+  // ===== AMIRI SHOES =====
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: `amiri-${i + 1}`,
+    name: [
+      "Amiri Skel Top Low White", "Amiri MA-1 Sneaker Black", "Amiri Bone Runner White",
+      "Amiri Stars Low White", "Amiri Skel Top High Black", "Amiri MA-2 Leather",
+      "Amiri Bone Runner Gray", "Amiri Stars Court Low", "Amiri Skel Top Low Black",
+      "Amiri MA-1 White Leather"
+    ][i],
+    brand: "AMIRI",
+    price: [1890000, 1690000, 1790000, 1590000, 1990000, 1690000, 1790000, 1490000, 1890000, 1690000][i],
+    images: [`https://placehold.co/600x600/222/ffffff?text=AMIRI+${i + 1}`],
+    category: "shoes",
+    sizes: shoeSizes,
+    rating: 4.7,
+    reviews: Math.floor(Math.random() * 150) + 40,
+    description: "Amiri 정품 스니커즈. LA 스트릿 럭셔리 감성의 프리미엄 신발입니다.",
+    isNew: i < 2,
+  })),
+
+  // ===== GIVENCHY SHOES =====
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: `givenchy-${i + 1}`,
+    name: [
+      "Givenchy City Sport White", "Givenchy TK-MX Runner", "Givenchy Spectre Low",
+      "Givenchy City Sport Black", "Givenchy G4 Low Top", "Givenchy TK-360 Sneaker",
+      "Givenchy Spectre Runner", "Givenchy City Court Lace", "Givenchy G4 High Top",
+      "Givenchy Marshmallow Slide"
+    ][i],
+    brand: "GIVENCHY",
+    price: [1590000, 1890000, 1690000, 1590000, 1490000, 1790000, 1690000, 1390000, 1590000, 990000][i],
+    images: [`https://placehold.co/600x600/333/ffffff?text=GIVENCHY+${i + 1}`],
+    category: "shoes",
+    sizes: shoeSizes,
+    rating: 4.6,
+    reviews: Math.floor(Math.random() * 120) + 30,
+    description: "Givenchy 정품 스니커즈. 파리지앵 럭셔리의 모던한 감성을 담았습니다.",
+    isNew: i < 2,
+  })),
+
+  // ===== GUCCI SHOES =====
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: `gucci-${i + 1}`,
+    name: [
+      "Gucci Ace Sneaker White", "Gucci Rhyton Sneaker Ivory", "Gucci Screener Leather",
+      "Gucci Run Sneaker Black", "Gucci Ace Bee Embroidered", "Gucci Basket Low Top",
+      "Gucci Rhyton Logo Print", "Gucci Run Trainer Gray", "Gucci Ace GG Supreme",
+      "Gucci MAC80 Sneaker"
+    ][i],
+    brand: "GUCCI",
+    price: [1890000, 2190000, 1990000, 1790000, 1990000, 1690000, 2190000, 1890000, 1790000, 1590000][i],
+    images: [`https://placehold.co/600x600/0a5c36/ffffff?text=GUCCI+${i + 1}`],
+    category: "shoes",
+    sizes: shoeSizes,
+    rating: 4.8,
+    reviews: Math.floor(Math.random() * 250) + 80,
+    description: "Gucci 정품 스니커즈. 이탈리안 럭셔리의 아이코닉한 디자인입니다.",
+    isNew: i < 3,
+  })),
+
+  // ===== LOUIS VUITTON SHOES =====
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: `lv-shoe-${i + 1}`,
+    name: [
+      "LV Trainer Sneaker White", "LV Archlight Sneaker", "LV Run Away Sneaker",
+      "LV Ollie Sneaker Black", "LV Trainer Maxi White", "LV Sprint Runner",
+      "LV Archlight 2.0 Silver", "LV Rivoli Sneaker", "LV Beverly Hills Slip On",
+      "LV Trainer Denim Blue"
+    ][i],
+    brand: "LOUIS VUITTON",
+    price: [2990000, 2790000, 2590000, 2490000, 3190000, 2390000, 2890000, 2290000, 1990000, 2990000][i],
+    images: [`https://placehold.co/600x600/3d2b1f/ffffff?text=LV+${i + 1}`],
+    category: "shoes",
+    sizes: shoeSizes,
+    rating: 4.9,
+    reviews: Math.floor(Math.random() * 300) + 100,
+    description: "Louis Vuitton 정품 스니커즈. 메종의 장인 정신과 현대적 디자인의 완벽한 조화입니다.",
+    isNew: i < 3,
+    isBestSeller: i === 0,
+  })),
+
+  // ===== MCQUEEN SHOES =====
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: `mcqueen-${i + 1}`,
+    name: [
+      "McQueen Oversized White", "McQueen Oversized Black Heel", "McQueen Tread Slick Boot",
+      "McQueen Sprint Runner White", "McQueen Court Trainer", "McQueen Oversized Pink",
+      "McQueen Tread Slick Low", "McQueen Sprint Runner Black", "McQueen Deck Plimsoll",
+      "McQueen Oversized Clear Sole"
+    ][i],
+    brand: "MCQUEEN",
+    price: [1290000, 1390000, 1590000, 1190000, 1290000, 1390000, 1490000, 1190000, 990000, 1490000][i],
+    images: [`https://placehold.co/600x600/111/ffffff?text=MCQUEEN+${i + 1}`],
+    category: "shoes",
+    sizes: shoeSizes,
+    rating: 4.7,
+    reviews: Math.floor(Math.random() * 200) + 60,
+    description: "Alexander McQueen 정품 스니커즈. 오버사이즈 솔의 시그니처 디자인입니다.",
+    isNew: i < 2,
+    isBestSeller: i === 0,
+  })),
+
+  // ===== SAINT LAURENT SHOES =====
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: `sl-${i + 1}`,
+    name: [
+      "SL Court Classic White", "SL/06 Court Canvas", "SL/61 Low Top Leather",
+      "SL/80 High Top White", "SL Court Classic Black", "SL/06 Signature Sneaker",
+      "SL/61 Distressed Low", "SL/80 Mid Top Cream", "SL Court Metallic Silver",
+      "SL/10H High Top Black"
+    ][i],
+    brand: "SAINT LAURENT",
+    price: [1490000, 1290000, 1390000, 1590000, 1490000, 1190000, 1390000, 1590000, 1290000, 1690000][i],
+    images: [`https://placehold.co/600x600/0d0d0d/ffffff?text=SL+${i + 1}`],
+    category: "shoes",
+    sizes: shoeSizes,
+    rating: 4.8,
+    reviews: Math.floor(Math.random() * 180) + 50,
+    description: "Saint Laurent 정품 스니커즈. 파리지앵 엘레강스의 미니멀한 럭셔리입니다.",
+    isNew: i < 2,
+  })),
 ];
 
 export const categories = [
