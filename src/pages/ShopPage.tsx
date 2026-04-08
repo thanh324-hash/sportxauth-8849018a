@@ -118,17 +118,57 @@ export default function ShopPage() {
                   <h4 className="text-xs font-bold uppercase tracking-wider mb-3">카테고리</h4>
                   <div className="flex flex-wrap gap-2">
                     {categories.map((c) => (
-                      <button
-                        key={c.id}
-                        onClick={() => setSelectedCategory(selectedCategory === c.id ? "" : c.id)}
-                        className={`px-3 py-1.5 text-xs rounded-sm transition-colors ${
-                          selectedCategory === c.id
-                            ? "bg-accent text-accent-foreground"
-                            : "bg-background hover:bg-background/80"
-                        }`}
-                      >
-                        {c.name}
-                      </button>
+                      <div key={c.id} className="relative">
+                        <button
+                          onClick={() => {
+                            if (c.id === "shoes") {
+                              setSelectedCategory(selectedCategory === c.id ? "" : c.id);
+                              if (selectedCategory === c.id) {
+                                setSelectedSubBrand("");
+                                setShowSubBrandDropdown(false);
+                              } else {
+                                setShowSubBrandDropdown(true);
+                              }
+                            } else {
+                              setSelectedCategory(selectedCategory === c.id ? "" : c.id);
+                              setSelectedSubBrand("");
+                              setShowSubBrandDropdown(false);
+                            }
+                          }}
+                          className={`px-3 py-1.5 text-xs rounded-sm transition-colors flex items-center gap-1 ${
+                            selectedCategory === c.id
+                              ? "bg-accent text-accent-foreground"
+                              : "bg-background hover:bg-background/80"
+                          }`}
+                        >
+                          {c.name}
+                          {c.id === "shoes" && <ChevronDown className="w-3 h-3" />}
+                        </button>
+                        {/* Sub-brand dropdown for shoes */}
+                        {c.id === "shoes" && selectedCategory === "shoes" && showSubBrandDropdown && (
+                          <div className="absolute top-full left-0 mt-1 bg-background border border-border rounded-sm shadow-lg z-50 min-w-[160px]">
+                            <button
+                              onClick={() => { setSelectedSubBrand(""); setShowSubBrandDropdown(false); }}
+                              className={`w-full text-left px-3 py-2 text-xs hover:bg-secondary transition-colors ${
+                                !selectedSubBrand ? "bg-accent text-accent-foreground" : ""
+                              }`}
+                            >
+                              전체
+                            </button>
+                            {shoeSubBrands.map((sb) => (
+                              <button
+                                key={sb}
+                                onClick={() => { setSelectedSubBrand(selectedSubBrand === sb ? "" : sb); setShowSubBrandDropdown(false); }}
+                                className={`w-full text-left px-3 py-2 text-xs hover:bg-secondary transition-colors ${
+                                  selectedSubBrand === sb ? "bg-accent text-accent-foreground" : ""
+                                }`}
+                              >
+                                {sb}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
