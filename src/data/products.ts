@@ -597,10 +597,7 @@ export const products: Product[] = [
 ];
 
 export const categories = [
-  { id: "running", name: "러닝화", icon: "🏃" },
-  { id: "basketball", name: "농구화", icon: "🏀" },
-  { id: "lifestyle", name: "라이프스타일", icon: "👟" },
-  { id: "fashion", name: "패션 신발", icon: "✨" },
+  { id: "shoes", name: "Giày", icon: "👟" },
   { id: "sportswear", name: "스포츠 유니폼", icon: "⚽" },
   { id: "fashionwear", name: "정품 패션 의류", icon: "👔" },
   { id: "bags", name: "가방 & 백팩", icon: "🎒" },
