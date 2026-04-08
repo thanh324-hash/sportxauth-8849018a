@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Search, SlidersHorizontal, X } from "lucide-react";
-import { products, brands, categories } from "@/data/products";
+import { Search, SlidersHorizontal, X, ChevronDown } from "lucide-react";
+import { products, brands, categories, shoeSubBrands } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -20,27 +20,31 @@ export default function ShopPage() {
   const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedPrice, setSelectedPrice] = useState(0);
+  const [selectedSubBrand, setSelectedSubBrand] = useState("");
   const [showFilters, setShowFilters] = useState(false);
+  const [showSubBrandDropdown, setShowSubBrandDropdown] = useState(false);
 
   const filtered = useMemo(() => {
     return products.filter((p) => {
       if (search && !p.name.toLowerCase().includes(search.toLowerCase()) && !p.brand.toLowerCase().includes(search.toLowerCase())) return false;
       if (selectedBrand && p.brand !== selectedBrand) return false;
       if (selectedCategory && p.category !== selectedCategory) return false;
+      if (selectedSubBrand && p.brand.toUpperCase() !== selectedSubBrand) return false;
       const range = priceRanges[selectedPrice];
       if (p.price < range.min || p.price > range.max) return false;
       return true;
     });
-  }, [search, selectedBrand, selectedCategory, selectedPrice]);
+  }, [search, selectedBrand, selectedCategory, selectedSubBrand, selectedPrice]);
 
   const clearFilters = () => {
     setSearch("");
     setSelectedBrand("");
     setSelectedCategory("");
+    setSelectedSubBrand("");
     setSelectedPrice(0);
   };
 
-  const hasFilters = search || selectedBrand || selectedCategory || selectedPrice > 0;
+  const hasFilters = search || selectedBrand || selectedCategory || selectedSubBrand || selectedPrice > 0;
 
   return (
     <div className="min-h-screen">
@@ -114,17 +118,57 @@ export default function ShopPage() {
                   <h4 className="text-xs font-bold uppercase tracking-wider mb-3">카테고리</h4>
                   <div className="flex flex-wrap gap-2">
                     {categories.map((c) => (
-                      <button
-                        key={c.id}
-                        onClick={() => setSelectedCategory(selectedCategory === c.id ? "" : c.id)}
-                        className={`px-3 py-1.5 text-xs rounded-sm transition-colors ${
-                          selectedCategory === c.id
-                            ? "bg-accent text-accent-foreground"
-                            : "bg-background hover:bg-background/80"
-                        }`}
-                      >
-                        {c.name}
-                      </button>
+                      <div key={c.id} className="relative">
+                        <button
+                          onClick={() => {
+                            if (c.id === "shoes") {
+                              setSelectedCategory(selectedCategory === c.id ? "" : c.id);
+                              if (selectedCategory === c.id) {
+                                setSelectedSubBrand("");
+                                setShowSubBrandDropdown(false);
+                              } else {
+                                setShowSubBrandDropdown(true);
+                              }
+                            } else {
+                              setSelectedCategory(selectedCategory === c.id ? "" : c.id);
+                              setSelectedSubBrand("");
+                              setShowSubBrandDropdown(false);
+                            }
+                          }}
+                          className={`px-3 py-1.5 text-xs rounded-sm transition-colors flex items-center gap-1 ${
+                            selectedCategory === c.id
+                              ? "bg-accent text-accent-foreground"
+                              : "bg-background hover:bg-background/80"
+                          }`}
+                        >
+                          {c.name}
+                          {c.id === "shoes" && <ChevronDown className="w-3 h-3" />}
+                        </button>
+                        {/* Sub-brand dropdown for shoes */}
+                        {c.id === "shoes" && selectedCategory === "shoes" && showSubBrandDropdown && (
+                          <div className="absolute top-full left-0 mt-1 bg-background border border-border rounded-sm shadow-lg z-50 min-w-[160px]">
+                            <button
+                              onClick={() => { setSelectedSubBrand(""); setShowSubBrandDropdown(false); }}
+                              className={`w-full text-left px-3 py-2 text-xs hover:bg-secondary transition-colors ${
+                                !selectedSubBrand ? "bg-accent text-accent-foreground" : ""
+                              }`}
+                            >
+                              전체
+                            </button>
+                            {shoeSubBrands.map((sb) => (
+                              <button
+                                key={sb}
+                                onClick={() => { setSelectedSubBrand(selectedSubBrand === sb ? "" : sb); setShowSubBrandDropdown(false); }}
+                                className={`w-full text-left px-3 py-2 text-xs hover:bg-secondary transition-colors ${
+                                  selectedSubBrand === sb ? "bg-accent text-accent-foreground" : ""
+                                }`}
+                              >
+                                {sb}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
