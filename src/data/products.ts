@@ -603,6 +603,16 @@ export const categories = [
   { id: "bags", name: "가방 & 백팩", icon: "🎒" },
 ];
 
+export const shoeSubBrands = [
+  "DIOR",
+  "AMIRI",
+  "GIVENCHY",
+  "GUCCI",
+  "LOUIS VUITTON",
+  "MCQUEEN",
+  "SAINT LAURENT",
+];
+
 export const brands = ["Nike", "Adidas", "Puma", "New Balance", "Converse", "BAPE", "MCM", "Louis Vuitton", "Onitsuka Tiger"];
 
 export function formatPrice(price: number): string {
