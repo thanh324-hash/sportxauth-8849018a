@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Search, SlidersHorizontal, X } from "lucide-react";
+import { Search, SlidersHorizontal, X, ChevronDown } from "lucide-react";
 import { products, brands, categories, shoeSubBrands } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,7 +20,9 @@ export default function ShopPage() {
   const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedPrice, setSelectedPrice] = useState(0);
+  const [selectedSubBrand, setSelectedSubBrand] = useState("");
   const [showFilters, setShowFilters] = useState(false);
+  const [showSubBrandDropdown, setShowSubBrandDropdown] = useState(false);
 
   const filtered = useMemo(() => {
     return products.filter((p) => {
