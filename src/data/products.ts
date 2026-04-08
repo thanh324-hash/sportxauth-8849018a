@@ -754,7 +754,7 @@ export const shoeSubBrands = [
   "SAINT LAURENT",
 ];
 
-export const brands = ["Nike", "Adidas", "Puma", "New Balance", "Converse", "BAPE", "MCM", "Louis Vuitton", "Onitsuka Tiger"];
+export const brands = ["Nike", "Adidas", "Puma", "New Balance", "Converse", "BAPE", "MCM", "Louis Vuitton", "Onitsuka Tiger", "DIOR", "AMIRI", "GIVENCHY", "GUCCI", "LOUIS VUITTON", "MCQUEEN", "SAINT LAURENT"];
 
 export function formatPrice(price: number): string {
   return new Intl.NumberFormat("ko-KR", {
