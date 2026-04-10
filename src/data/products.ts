@@ -50,6 +50,12 @@ import diorB27Blue3 from "@/assets/dior-b27-blue-3.jpg";
 import diorB27Blue4 from "@/assets/dior-b27-blue-4.jpg";
 import diorB27Blue5 from "@/assets/dior-b27-blue-5.jpg";
 import diorB27Blue6 from "@/assets/dior-b27-blue-6.jpg";
+import diorB27LowWhiteGray1 from "@/assets/34235555-a0b2-4f55-a5f6-5d50d21a05c0.jpg";
+import diorB27LowWhiteGray2 from "@/assets/2350280a-39ef-459b-a4ce-3491bb89acc6.png";
+import diorB27LowWhiteGray3 from "@/assets/dfade98f-5f2d-4301-bc92-9bc5bcce9541.jpg";
+import diorB27LowWhiteGray4 from "@/assets/df1b54ba-4711-4e69-b9c2-98cba6bc96d4.png";
+import diorB27LowWhiteGray5 from "@/assets/f3c6e6cd-c07c-4f3d-b8f3-42db1024ad36.jpg";
+import diorB27LowWhiteGray6 from "@/assets/b68e63b1-bc31-49a4-b13f-88bb0caddff5.png";
 import jerseySoccer from "@/assets/jersey-soccer.jpg";
 import jerseyBasketball from "@/assets/jersey-basketball.jpg";
 import jerseyRunning from "@/assets/jersey-running.jpg";
@@ -647,12 +653,12 @@ export const products: Product[] = [
       "Dior B27 Low Gray Oblique Galaxy Best Quality", 
       "B27 LOW-TOP Sneaker Oblique Galaxy Leather Best Quality",
       "B27 Low White Smooth Calfskin Blue Denim White Dior Oblique Galaxy Best Quality", 
-      "Dior B30 Gray Mesh", 
+      "Dior B27 Low White Gray Oblique Galaxy Best Quality", 
       "Dior Walk'n'Dior Sneaker",
       "Dior B27 Mid Top Beige"
     ][i],
     brand: "DIOR",
-    price: [890000, 1090000, 590000, 490000, 590000, 390000, 390000, 2790000, 1990000, 1090000][i],
+    price: [890000, 1090000, 590000, 490000, 590000, 390000, 390000, 390000, 1990000, 1090000][i],
     images: i === 0 
       ? [diorB27_1, diorB27_2, diorB27_3, diorB27_4, diorB27_5, diorB27_6]
       : i === 1 
@@ -667,6 +673,8 @@ export const products: Product[] = [
       ? [diorB27Low1, diorB27Low2, diorB27Low3, diorB27Low4, diorB27Low5, diorB27Low6]
       : i === 6
       ? [diorB27Blue1, diorB27Blue2, diorB27Blue3, diorB27Blue4, diorB27Blue5, diorB27Blue6]
+      : i === 7
+      ? [diorB27LowWhiteGray1, diorB27LowWhiteGray2, diorB27LowWhiteGray3, diorB27LowWhiteGray4, diorB27LowWhiteGray5, diorB27LowWhiteGray6]
       : Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/1a1a1a/ffffff?text=DIOR+${i + 1}+IMG${j + 1}`),
     category: "shoes",
     sizes: shoeSizes,
