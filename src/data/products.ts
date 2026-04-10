@@ -700,7 +700,7 @@ export const products: Product[] = [
       "LV Trainer Denim Blue"
     ][i],
     brand: "LOUIS VUITTON",
-    price: [2990000, 2790000, 2590000, 2490000, 3190000, 2390000, 2890000, 2290000, 1990000, 2990000][i],
+    price: [2990000, 2790000, 1090000, 2490000, 3190000, 2390000, 2890000, 2290000, 1990000, 2990000][i],
     images: Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/3d2b1f/ffffff?text=LV+${i + 1}+IMG${j + 1}`),
     category: "shoes",
     sizes: shoeSizes,
