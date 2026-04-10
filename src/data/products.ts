@@ -38,6 +38,12 @@ import diorGray5 from "@/assets/dior-gray-5.jpg";
 import diorGray6 from "@/assets/dior-gray-6.jpg";
 import shoeBasketball from "@/assets/shoe-basketball.jpg";
 import heroShoe from "@/assets/hero-shoe.jpg";
+import diorB27Low1 from "@/assets/dior-b27-low-1.jpg";
+import diorB27Low2 from "@/assets/dior-b27-low-2.jpg";
+import diorB27Low3 from "@/assets/dior-b27-low-3.jpg";
+import diorB27Low4 from "@/assets/dior-b27-low-4.jpg";
+import diorB27Low5 from "@/assets/dior-b27-low-5.jpg";
+import diorB27Low6 from "@/assets/dior-b27-low-6.jpg";
 import jerseySoccer from "@/assets/jersey-soccer.jpg";
 import jerseyBasketball from "@/assets/jersey-basketball.jpg";
 import jerseyRunning from "@/assets/jersey-running.jpg";
@@ -633,14 +639,14 @@ export const products: Product[] = [
       "Dior B27 Low Black Oblique Galaxy Leather With Smooth Calfskin And Suede Best Quality",
       "Dior B27 Low Dior Oblique Galaxy White Best Quality", 
       "Dior B27 Low Gray Oblique Galaxy Best Quality", 
-      "Dior B22 Blue Technical",
+      "B27 LOW-TOP Sneaker Oblique Galaxy Leather Best Quality",
       "Dior B23 Low Top Canvas", 
       "Dior B30 Gray Mesh", 
       "Dior Walk'n'Dior Sneaker",
       "Dior B27 Mid Top Beige"
     ][i],
     brand: "DIOR",
-    price: [890000, 1090000, 590000, 490000, 590000, 2890000, 2390000, 2790000, 1990000, 1090000][i],
+    price: [890000, 1090000, 590000, 490000, 590000, 390000, 2390000, 2790000, 1990000, 1090000][i],
     images: i === 0 
       ? [diorB27_1, diorB27_2, diorB27_3, diorB27_4, diorB27_5, diorB27_6]
       : i === 1 
@@ -651,6 +657,8 @@ export const products: Product[] = [
       ? [diorWhite1, diorWhite2, diorWhite3, diorWhite4, diorWhite5, diorWhite6]
       : i === 4
       ? [diorGray1, diorGray2, diorGray3, diorGray4, diorGray5, diorGray6]
+      : i === 5
+      ? [diorB27Low1, diorB27Low2, diorB27Low3, diorB27Low4, diorB27Low5, diorB27Low6]
       : Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/1a1a1a/ffffff?text=DIOR+${i + 1}+IMG${j + 1}`),
     category: "shoes",
     sizes: shoeSizes,
