@@ -30,6 +30,12 @@ import diorWhite3 from "@/assets/dior-white-3.jpg";
 import diorWhite4 from "@/assets/dior-white-4.jpg";
 import diorWhite5 from "@/assets/dior-white-5.jpg";
 import diorWhite6 from "@/assets/dior-white-6.jpg";
+import diorGray1 from "@/assets/dior-gray-1.jpg";
+import diorGray2 from "@/assets/dior-gray-2.jpg";
+import diorGray3 from "@/assets/dior-gray-3.jpg";
+import diorGray4 from "@/assets/dior-gray-4.jpg";
+import diorGray5 from "@/assets/dior-gray-5.jpg";
+import diorGray6 from "@/assets/dior-gray-6.jpg";
 import shoeBasketball from "@/assets/shoe-basketball.jpg";
 import heroShoe from "@/assets/hero-shoe.jpg";
 import jerseySoccer from "@/assets/jersey-soccer.jpg";
@@ -626,7 +632,7 @@ export const products: Product[] = [
       "Dior B27 Low White Navy Best Quality", 
       "Dior B27 Low Black Oblique Galaxy Leather With Smooth Calfskin And Suede Best Quality",
       "Dior B27 Low Dior Oblique Galaxy White Best Quality", 
-      "Dior B101 Sneaker Black", 
+      "Dior B27 Low Gray Oblique Galaxy Best Quality", 
       "Dior B22 Blue Technical",
       "Dior B23 Low Top Canvas", 
       "Dior B30 Gray Mesh", 
@@ -634,7 +640,7 @@ export const products: Product[] = [
       "Dior B27 Mid Top Beige"
     ][i],
     brand: "DIOR",
-    price: [890000, 1090000, 590000, 490000, 2690000, 2890000, 2390000, 2790000, 1990000, 1090000][i],
+    price: [890000, 1090000, 590000, 490000, 590000, 2890000, 2390000, 2790000, 1990000, 1090000][i],
     images: i === 0 
       ? [diorB27_1, diorB27_2, diorB27_3, diorB27_4, diorB27_5, diorB27_6]
       : i === 1 
@@ -643,6 +649,8 @@ export const products: Product[] = [
       ? [diorBlack1, diorBlack2, diorBlack3, diorBlack4, diorBlack5, diorBlack6]
       : i === 3
       ? [diorWhite1, diorWhite2, diorWhite3, diorWhite4, diorWhite5, diorWhite6]
+      : i === 4
+      ? [diorGray1, diorGray2, diorGray3, diorGray4, diorGray5, diorGray6]
       : Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/1a1a1a/ffffff?text=DIOR+${i + 1}+IMG${j + 1}`),
     category: "shoes",
     sizes: shoeSizes,
