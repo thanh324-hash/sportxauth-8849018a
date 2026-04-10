@@ -9,7 +9,7 @@ import killBill3 from "@/assets/061c5180-2cc9-4f1f-bca7-e8dfa5896633.png";
 import diorB27_1 from "@/assets/dior-b27-1.png";
 import diorB27_2 from "@/assets/dior-b27-2.png";
 import diorB27_3 from "@/assets/dior-b27-3.png";
-import diorB27_4 from "@/assets/dior-b27-4.jpg";
+import diorB27_4 from "@/assets/0207800c-eaff-4001-80bc-bf8badf9da6b.png";
 import diorB27_5 from "@/assets/dior-b27-5.png";
 import diorB27_6 from "@/assets/dior-b27-6.png";
 import shoeBasketball from "@/assets/shoe-basketball.jpg";
