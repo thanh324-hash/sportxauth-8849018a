@@ -622,26 +622,34 @@ export const products: Product[] = [
   ...Array.from({ length: 10 }, (_, i) => ({
     id: `dior-${i + 1}`,
     name: [
-      "Dior B27 Low Top Sneaker Cream Greige Best Quality", "Dior B27 Low White Navy Best Quality", "Dior B27 Low Black Oblique Galaxy Leather With Smooth Calfskin And Suede Best Quality",
-      "Dior B27 Low Top White", "Dior B101 Sneaker Black", "Dior B22 Blue Technical",
-      "Dior B23 Low Top Canvas", "Dior B30 Gray Mesh", "Dior Walk'n'Dior Sneaker",
+      "Dior B27 Low Top Sneaker Cream Greige Best Quality", 
+      "Dior B27 Low White Navy Best Quality", 
+      "Dior B27 Low Black Oblique Galaxy Leather With Smooth Calfskin And Suede Best Quality",
+      "Dior B27 Low Dior Oblique Galaxy White Best Quality", 
+      "Dior B101 Sneaker Black", 
+      "Dior B22 Blue Technical",
+      "Dior B23 Low Top Canvas", 
+      "Dior B30 Gray Mesh", 
+      "Dior Walk'n'Dior Sneaker",
       "Dior B27 Mid Top Beige"
     ][i],
     brand: "DIOR",
-    price: [890000, 1090000, 590000, 2490000, 2690000, 2890000, 2390000, 2790000, 1990000, 1090000][i],
+    price: [890000, 1090000, 590000, 490000, 2690000, 2890000, 2390000, 2790000, 1990000, 1090000][i],
     images: i === 0 
       ? [diorB27_1, diorB27_2, diorB27_3, diorB27_4, diorB27_5, diorB27_6]
       : i === 1 
       ? [diorNavy1, diorNavy2, diorNavy3, diorNavy4, diorNavy5, diorNavy6]
       : i === 2
       ? [diorBlack1, diorBlack2, diorBlack3, diorBlack4, diorBlack5, diorBlack6]
+      : i === 3
+      ? [diorWhite1, diorWhite2, diorWhite3, diorWhite4, diorWhite5, diorWhite6]
       : Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/1a1a1a/ffffff?text=DIOR+${i + 1}+IMG${j + 1}`),
     category: "shoes",
     sizes: shoeSizes,
     rating: 4.8,
     reviews: Math.floor(Math.random() * 200) + 50,
     description: "Dior 정품 스니커즈. 최고급 소재와 장인 정신이 담긴 럭셔리 신발입니다.",
-    isNew: i < 3,
+    isNew: i < 4,
   })),
 
   // ===== AMIRI SHOES =====
