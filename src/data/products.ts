@@ -655,10 +655,10 @@ export const products: Product[] = [
       "B27 Low White Smooth Calfskin Blue Denim White Dior Oblique Galaxy Best Quality", 
       "Dior B27 Low White Gray Oblique Galaxy Best Quality", 
       "품절입니다.",
-      "Dior B27 Mid Top Beige"
+      "품절입니다"
     ][i],
     brand: "DIOR",
-    price: [890000, 1090000, 590000, 490000, 590000, 390000, 390000, 390000, 340000, 1090000][i],
+    price: [890000, 1090000, 590000, 490000, 590000, 390000, 390000, 390000, 340000, 320000][i],
     images: i === 0 
       ? [diorB27_1, diorB27_2, diorB27_3, diorB27_4, diorB27_5, diorB27_6]
       : i === 1 
