@@ -610,7 +610,7 @@ export const products: Product[] = [
   ...Array.from({ length: 10 }, (_, i) => ({
     id: `dior-${i + 1}`,
     name: [
-      "Dior B27 Low Top Sneaker Cream Greige Best Quality", "Dior B23 High Top Oblique", "Dior B30 Sneaker Cream",
+      "Dior B27 Low Top Sneaker Cream Greige Best Quality", "Dior B27 Low White Navy Best Quality", "Dior B30 Sneaker Cream",
       "Dior B27 Low Top White", "Dior B101 Sneaker Black", "Dior B22 Blue Technical",
       "Dior B23 Low Top Canvas", "Dior B30 Gray Mesh", "Dior Walk'n'Dior Sneaker",
       "Dior B27 Mid Top Beige"
@@ -619,6 +619,8 @@ export const products: Product[] = [
     price: [890000, 2590000, 2790000, 2490000, 2690000, 2890000, 2390000, 2790000, 1990000, 2590000][i],
     images: i === 0 
       ? [diorB27_1, diorB27_2, diorB27_3, diorB27_4, diorB27_5, diorB27_6]
+      : i === 1 
+      ? [diorNavy1, diorNavy2, diorNavy3, diorNavy4, diorNavy5, diorNavy6]
       : Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/1a1a1a/ffffff?text=DIOR+${i + 1}+IMG${j + 1}`),
     category: "shoes",
     sizes: shoeSizes,
