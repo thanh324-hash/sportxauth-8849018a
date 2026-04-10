@@ -4,6 +4,12 @@ import mlbSandal3 from "@/assets/mlb-sandal-3.png";
 import mlbSandal4 from "@/assets/mlb-sandal-4.png";
 import mlbSandal5 from "@/assets/mlb-sandal-5.png";
 import mlbSandal6 from "@/assets/mlb-sandal-6.png";
+import gucciRhyton1 from "@/assets/gucci-rhyton-1.jpg";
+import gucciRhyton2 from "@/assets/gucci-rhyton-2.jpg";
+import gucciRhyton3 from "@/assets/gucci-rhyton-3.jpg";
+import gucciRhyton4 from "@/assets/gucci-rhyton-4.jpg";
+import gucciRhyton5 from "@/assets/gucci-rhyton-5.jpg";
+import gucciRhyton6 from "@/assets/gucci-rhyton-6.jpg";
 import killBill2 from "@/assets/9bea1607-41e0-4f16-a3f0-f4d6fd218ecf.png";
 import killBill3 from "@/assets/061c5180-2cc9-4f1f-bca7-e8dfa5896633.png";
 import diorB27_1 from "@/assets/dior-b27-1.png";
@@ -728,14 +734,16 @@ export const products: Product[] = [
   ...Array.from({ length: 10 }, (_, i) => ({
     id: `gucci-${i + 1}`,
     name: [
-      "Gucci Ace Sneaker White", "Gucci Rhyton Sneaker Ivory", "Gucci Screener Leather",
+      "Gucci Wmns Rhyton Leather Sneaker ‘Logo’ Like Auth", "Gucci Rhyton Sneaker Ivory", "Gucci Screener Leather",
       "Gucci Run Sneaker Black", "Gucci Ace Bee Embroidered", "Gucci Basket Low Top",
       "Gucci Rhyton Logo Print", "Gucci Run Trainer Gray", "Gucci Ace GG Supreme",
       "Gucci MAC80 Sneaker"
     ][i],
     brand: "GUCCI",
-    price: [1890000, 2190000, 1990000, 1790000, 1990000, 1690000, 2190000, 1890000, 1790000, 1590000][i],
-    images: Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/0a5c36/ffffff?text=GUCCI+${i + 1}+IMG${j + 1}`),
+    price: [420000, 2190000, 1990000, 1790000, 1990000, 1690000, 2190000, 1890000, 1790000, 1590000][i],
+    images: i === 0 
+      ? [gucciRhyton1, gucciRhyton2, gucciRhyton3, gucciRhyton4, gucciRhyton5, gucciRhyton6]
+      : Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/0a5c36/ffffff?text=GUCCI+${i + 1}+IMG${j + 1}`),
     category: "shoes",
     sizes: shoeSizes,
     rating: 4.8,
