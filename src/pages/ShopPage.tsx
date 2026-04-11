@@ -115,6 +115,34 @@ export default function ShopPage() {
           </div>
         )}
 
+        {/* Team tabs for sportswear */}
+        {selectedCategory === "sportswear" && (
+          <div className="flex items-center gap-2 mb-8 overflow-x-auto pb-2">
+            <button
+              onClick={() => setSelectedTeam("")}
+              className={`px-3 py-2 text-xs font-medium rounded-sm whitespace-nowrap transition-colors ${
+                !selectedTeam
+                  ? "bg-accent text-accent-foreground"
+                  : "bg-secondary hover:bg-secondary/80"
+              }`}
+            >
+              전체
+            </button>
+            {sportswearTeams.map((team) => (
+              <button
+                key={team}
+                onClick={() => setSelectedTeam(selectedTeam === team ? "" : team)}
+                className={`px-3 py-2 text-xs font-medium rounded-sm whitespace-nowrap transition-colors ${
+                  selectedTeam === team
+                    ? "bg-accent text-accent-foreground"
+                    : "bg-secondary hover:bg-secondary/80"
+                }`}
+              >
+                {team}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Filters */}
         <AnimatePresence>
