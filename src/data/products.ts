@@ -97,6 +97,7 @@ export type Product = {
   description: string;
   isNew?: boolean;
   isBestSeller?: boolean;
+  team?: string;
 };
 
 const shoeSizes = [36, 37, 38, 39, 40, 41, 42, 43];
