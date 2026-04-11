@@ -31,7 +31,7 @@ export default function ShopPage() {
       if (selectedBrand && p.brand !== selectedBrand) return false;
       if (selectedCategory && p.category !== selectedCategory) return false;
       if (selectedSubBrand && p.brand.toUpperCase() !== selectedSubBrand) return false;
-      if (selectedTeam && p.team !== selectedTeam) return false;
+      if (selectedTeam && p.brand !== selectedTeam) return false;
       const range = priceRanges[selectedPrice];
       if (p.price < range.min || p.price > range.max) return false;
       return true;
