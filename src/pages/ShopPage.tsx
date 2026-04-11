@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Search, SlidersHorizontal, X, ChevronDown } from "lucide-react";
-import { products, brands, categories, shoeSubBrands } from "@/data/products";
+import { products, brands, categories, shoeSubBrands, sportswearTeams } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -21,6 +21,7 @@ export default function ShopPage() {
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedPrice, setSelectedPrice] = useState(0);
   const [selectedSubBrand, setSelectedSubBrand] = useState("");
+  const [selectedTeam, setSelectedTeam] = useState("");
   const [showFilters, setShowFilters] = useState(false);
   const [showSubBrandDropdown, setShowSubBrandDropdown] = useState(false);
 
@@ -30,21 +31,23 @@ export default function ShopPage() {
       if (selectedBrand && p.brand !== selectedBrand) return false;
       if (selectedCategory && p.category !== selectedCategory) return false;
       if (selectedSubBrand && p.brand.toUpperCase() !== selectedSubBrand) return false;
+      if (selectedTeam && p.team !== selectedTeam) return false;
       const range = priceRanges[selectedPrice];
       if (p.price < range.min || p.price > range.max) return false;
       return true;
     });
-  }, [search, selectedBrand, selectedCategory, selectedSubBrand, selectedPrice]);
+  }, [search, selectedBrand, selectedCategory, selectedSubBrand, selectedTeam, selectedPrice]);
 
   const clearFilters = () => {
     setSearch("");
     setSelectedBrand("");
     setSelectedCategory("");
     setSelectedSubBrand("");
+    setSelectedTeam("");
     setSelectedPrice(0);
   };
 
-  const hasFilters = search || selectedBrand || selectedCategory || selectedSubBrand || selectedPrice > 0;
+  const hasFilters = search || selectedBrand || selectedCategory || selectedSubBrand || selectedTeam || selectedPrice > 0;
 
   return (
     <div className="min-h-screen">
