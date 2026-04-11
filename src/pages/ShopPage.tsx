@@ -117,10 +117,10 @@ export default function ShopPage() {
 
         {/* Team tabs for sportswear */}
         {selectedCategory === "sportswear" && (
-          <div className="flex items-center gap-2 mb-8 overflow-x-auto pb-2">
+          <div className="flex flex-wrap items-center gap-2 mb-8">
             <button
               onClick={() => setSelectedTeam("")}
-              className={`px-3 py-2 text-xs font-medium rounded-sm whitespace-nowrap transition-colors ${
+              className={`px-4 py-2 text-xs font-medium rounded-sm whitespace-nowrap transition-colors ${
                 !selectedTeam
                   ? "bg-accent text-accent-foreground"
                   : "bg-secondary hover:bg-secondary/80"
@@ -132,7 +132,7 @@ export default function ShopPage() {
               <button
                 key={team}
                 onClick={() => setSelectedTeam(selectedTeam === team ? "" : team)}
-                className={`px-3 py-2 text-xs font-medium rounded-sm whitespace-nowrap transition-colors ${
+                className={`px-4 py-2 text-xs font-medium rounded-sm whitespace-nowrap transition-colors ${
                   selectedTeam === team
                     ? "bg-accent text-accent-foreground"
                     : "bg-secondary hover:bg-secondary/80"
