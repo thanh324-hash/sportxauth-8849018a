@@ -464,7 +464,7 @@ export const products: Product[] = [
     const color = teamColors[team] || "333333/ffffff";
     const productNames = team === "Manchester United" ? [
       "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988",
-      "Manchester United Away Jersey 24/25",
+      "Manchester United 24/25 Home Authentic Player Long Sleeve Football Jersey – Premier League Patch + Mount #7 – IT1988",
       "Manchester United Third Jersey 24/25",
       "Manchester United Home Jersey 23/24",
       "Manchester United Away Jersey 23/24",
@@ -485,12 +485,12 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 116000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
       
-      if (team === "Manchester United" && i === 0) {
+      if (team === "Manchester United" && (i === 0 || i === 1)) {
         images = [
           "https://cdn.hstatic.net/products/200000293662/109_99b6cb740b6a499d82a2b741298ba54c.jpg",
           "https://cdn.hstatic.net/products/200000293662/103_b724273417bd45b4aea6676778614024.jpg",
