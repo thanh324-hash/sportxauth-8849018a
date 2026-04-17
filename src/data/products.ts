@@ -485,12 +485,12 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 116000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
       
-      if (team === "Manchester United" && i === 0) {
+      if (team === "Manchester United" && (i === 0 || i === 1)) {
         images = [
           "https://cdn.hstatic.net/products/200000293662/109_99b6cb740b6a499d82a2b741298ba54c.jpg",
           "https://cdn.hstatic.net/products/200000293662/103_b724273417bd45b4aea6676778614024.jpg",
