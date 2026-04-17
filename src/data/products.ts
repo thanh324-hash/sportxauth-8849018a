@@ -462,7 +462,18 @@ export const products: Product[] = [
       "Juventus": "000000/ffffff",
     };
     const color = teamColors[team] || "333333/ffffff";
-    const productNames = [
+    const productNames = team === "Manchester United" ? [
+      "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988",
+      "Manchester United Away Jersey 24/25",
+      "Manchester United Third Jersey 24/25",
+      "Manchester United Home Jersey 23/24",
+      "Manchester United Away Jersey 23/24",
+      "Manchester United Training Top",
+      "Manchester United Anthem Jacket",
+      "Manchester United Pre-Match Jersey",
+      "Manchester United Retro Classic Jersey",
+      "Manchester United Special Edition Jersey",
+    ] : [
       `${team} Home Jersey 24/25`,
       `${team} Away Jersey 24/25`,
       `${team} Third Jersey 24/25`,
@@ -474,7 +485,7 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => ({
       id: `sportswear-${teamIdx * 10 + i + 1}`,
