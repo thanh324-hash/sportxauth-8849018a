@@ -517,7 +517,7 @@ export const products: Product[] = [
         isBestSeller: i === 0,
         team,
       };
-    });
+    }).filter((p) => p.id !== "sportswear-1");
   }),
 
   // ===== BAGS =====
