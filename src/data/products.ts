@@ -492,7 +492,7 @@ export const products: Product[] = [
       
       if (team === "Manchester United" && i === 0) {
         images = [
-          "https://cdn.hstatic.net/products/200000293662/109_99b6cb740b6a499d82a2b741298ba54c_medium.jpg",
+          "https://cdn.hstatic.net/products/200000293662/109_99b6cb740b6a499d82a2b741298ba54c.jpg",
           "https://cdn.hstatic.net/products/200000293662/103_b724273417bd45b4aea6676778614024.jpg",
           "https://cdn.hstatic.net/products/200000293662/105_edf0cf6c93f04547883c01e318f2ed45.jpg",
           "https://cdn.hstatic.net/products/200000293662/106_622a16e9e42342e58374e8fd90585f18.jpg",
