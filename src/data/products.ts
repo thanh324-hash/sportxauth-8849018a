@@ -462,7 +462,18 @@ export const products: Product[] = [
       "Juventus": "000000/ffffff",
     };
     const color = teamColors[team] || "333333/ffffff";
-    const productNames = [
+    const productNames = team === "Manchester United" ? [
+      "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988",
+      "Manchester United Away Jersey 24/25",
+      "Manchester United Third Jersey 24/25",
+      "Manchester United Home Jersey 23/24",
+      "Manchester United Away Jersey 23/24",
+      "Manchester United Training Top",
+      "Manchester United Anthem Jacket",
+      "Manchester United Pre-Match Jersey",
+      "Manchester United Retro Classic Jersey",
+      "Manchester United Special Edition Jersey",
+    ] : [
       `${team} Home Jersey 24/25`,
       `${team} Away Jersey 24/25`,
       `${team} Third Jersey 24/25`,
@@ -474,24 +485,39 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
-    return productNames.map((name, i) => ({
-      id: `sportswear-${teamIdx * 10 + i + 1}`,
-      name,
-      brand: team,
-      price: prices[i],
-      originalPrice: originalPrices[i],
-      images: Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`),
-      category: "sportswear" as const,
-      sizes: ["S", "M", "L", "XL", "2XL"],
-      rating: +(4.3 + Math.random() * 0.6).toFixed(1),
-      reviews: Math.floor(Math.random() * 300) + 50,
-      description: `${team} 정품 유니폼. 프리미엄 소재와 공식 라이선스 디자인으로 최고의 품질을 자랑합니다.`,
-      isNew: i < 3,
-      isBestSeller: i === 0,
-      team,
-    }));
+    return productNames.map((name, i) => {
+      let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
+      
+      if (team === "Manchester United" && i === 0) {
+        images = [
+          "https://cdn.hstatic.net/products/200000293662/109_99b6cb740b6a499d82a2b741298ba54c_medium.jpg",
+          "https://cdn.hstatic.net/products/200000293662/103_b724273417bd45b4aea6676778614024.jpg",
+          "https://cdn.hstatic.net/products/200000293662/105_edf0cf6c93f04547883c01e318f2ed45.jpg",
+          "https://cdn.hstatic.net/products/200000293662/106_622a16e9e42342e58374e8fd90585f18.jpg",
+          "https://cdn.hstatic.net/products/200000293662/107_07baeff7cd4c4996841bcd2cc211a7b5.jpg",
+          "https://cdn.hstatic.net/products/200000293662/108_d19864ac36424c04b96d68277ba3a04b.jpg"
+        ];
+      }
+
+      return {
+        id: `sportswear-${teamIdx * 10 + i + 1}`,
+        name,
+        brand: team === "Manchester United" && i === 0 ? "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988" : team,
+        price: prices[i],
+        originalPrice: originalPrices[i],
+        images,
+        category: "sportswear" as const,
+        sizes: ["S", "M", "L", "XL", "2XL"],
+        rating: +(4.3 + Math.random() * 0.6).toFixed(1),
+        reviews: Math.floor(Math.random() * 300) + 50,
+        description: `${team} 정품 유니폼. 프리미엄 소재와 공식 라이선스 디자인으로 최고의 품질을 자랑합니다.`,
+        isNew: i < 3,
+        isBestSeller: i === 0,
+        team,
+      };
+    });
   }),
 
   // ===== BAGS =====
