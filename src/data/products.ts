@@ -499,6 +499,15 @@ export const products: Product[] = [
           "https://cdn.hstatic.net/products/200000293662/107_07baeff7cd4c4996841bcd2cc211a7b5.jpg",
           "https://cdn.hstatic.net/products/200000293662/108_d19864ac36424c04b96d68277ba3a04b.jpg"
         ];
+      } else if (team === "Manchester United" && i === 2) {
+        images = [
+          "https://cdn.hstatic.net/products/200000293662/53_2e7654b8279f431cb273163760354c4c.jpg",
+          "https://cdn.hstatic.net/products/200000293662/54_fd8d0f54e2d44746890907e24ad7d0e9.jpg",
+          "https://cdn.hstatic.net/products/200000293662/55_d0ceddc6515240038197b18dd26acaeb.jpg",
+          "https://cdn.hstatic.net/products/200000293662/56_78ef5df0c11a4800b4dc30f76ff9eb5d.jpg",
+          "https://www.90sfootballstore.com/cdn/shop/files/F92C6BD4-2DB6-45AE-8726-57FD11D994DE_1024x1024@2x.jpg?v=1723881377",
+          "https://www.90sfootballstore.com/cdn/shop/files/67E97508-59E7-42F6-9849-567389C26799_110x110@2x.jpg?v=1723881377"
+        ];
       }
 
       return {
