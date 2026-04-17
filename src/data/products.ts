@@ -512,7 +512,7 @@ export const products: Product[] = [
         sizes: ["S", "M", "L", "XL", "2XL"],
         rating: +(4.3 + Math.random() * 0.6).toFixed(1),
         reviews: Math.floor(Math.random() * 300) + 50,
-        description: `${team} 정품 유니폼. 프리미엄 소재와 공식 라이선스 디자인으로 최고의 품질을 자랑합니다.`,
+        description: `${team} 정품 유니폼. 프리미엄 소재와 공식 라이선스 디자인으로 최고의 품질을 자랑합니다.   주문 시 원하시는 이름으로 마킹 디자인 가능합니다 ~`,
         isNew: i < 3,
         isBestSeller: i === 0,
         team,
