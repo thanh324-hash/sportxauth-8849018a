@@ -464,7 +464,7 @@ export const products: Product[] = [
     const color = teamColors[team] || "333333/ffffff";
     const productNames = team === "Manchester United" ? [
       "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988",
-      "Manchester United Away Jersey 24/25",
+      "Manchester United 24/25 Home Authentic Player Long Sleeve Football Jersey – Premier League Patch + Mount #7 – IT1988",
       "Manchester United Third Jersey 24/25",
       "Manchester United Home Jersey 23/24",
       "Manchester United Away Jersey 23/24",
