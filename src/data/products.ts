@@ -469,7 +469,7 @@ export const products: Product[] = [
       "Retro Mu 1991/1992  awway",
       "Manchester United Third football shirt 2003 Soccer Nike Jersey Mens Trikot",
       "Retro Mu 1998/2000 ( 3rd )",
-      "Manchester United Anthem Jacket",
+      "Retro Mu 1992 auth no tag",
       "Manchester United Pre-Match Jersey",
       "Manchester United Retro Classic Jersey",
       "Manchester United Special Edition Jersey",
