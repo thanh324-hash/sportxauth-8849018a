@@ -485,7 +485,7 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -534,6 +534,15 @@ export const products: Product[] = [
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/b4c7e36dd26474bc.jpg?v=1764373519767",
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/40bc5638d290cf17.jpg?v=1764373519767",
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/e1dabeb53fc7d0db.jpg?v=1764373518213"
+        ];
+      } else if (team === "Manchester United" && i === 6) {
+        images = [
+          "https://i.ebayimg.com/images/g/6RYAAeSwjStpxR-E/s-l1600.webp",
+          "https://i.ebayimg.com/images/g/kwoAAeSwEKZpxR-U/s-l1600.webp",
+          "https://i.ebayimg.com/images/g/opAAAeSwuohoi65E/s-l1600.webp",
+          "https://i.ebayimg.com/images/g/mC4AAeSwzP9pxR-W/s-l1600.webp",
+          "https://i.ebayimg.com/images/g/2S0AAeSwLM5pxR-V/s-l1600.webp",
+          "https://bizweb.dktcdn.net/100/461/076/products/z6123017821328-43b7ed44d7bd25aca7108232fd4ddec8.jpg?v=1733990968220"
         ];
       }
       return {
