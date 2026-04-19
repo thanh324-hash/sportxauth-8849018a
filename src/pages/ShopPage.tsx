@@ -262,7 +262,34 @@ export default function ShopPage() {
         {/* Results */}
         <p className="text-sm text-muted-foreground mb-6">{filtered.length}개 상품</p>
 
-        {filtered.length > 0 ? (
+        {selectedCategory === "sportswear" && !selectedTeam && !search && !selectedBrand && selectedPrice === 0 ? (
+          <Accordion type="multiple" defaultValue={[sportswearTeams[0]]} className="space-y-2">
+            {sportswearTeams.map((team) => {
+              const teamProducts = filtered.filter((p) => p.brand === team || p.brand.toUpperCase().includes(team.toUpperCase()));
+              return (
+                <AccordionItem key={team} value={team} className="border border-border rounded-sm bg-secondary/30 px-4">
+                  <AccordionTrigger className="hover:no-underline py-4">
+                    <div className="flex items-center gap-3">
+                      <span className="font-display text-xl tracking-wider">{team}</span>
+                      <span className="text-xs text-muted-foreground">({teamProducts.length})</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    {teamProducts.length > 0 ? (
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-2 pb-4">
+                        {teamProducts.map((p, i) => (
+                          <ProductCard key={p.id} product={p} index={i} />
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-sm text-muted-foreground py-4">상품이 없습니다.</p>
+                    )}
+                  </AccordionContent>
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+        ) : filtered.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filtered.map((p, i) => (
               <ProductCard key={p.id} product={p} index={i} />
