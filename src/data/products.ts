@@ -544,6 +544,15 @@ export const products: Product[] = [
           "https://i.ebayimg.com/images/g/2S0AAeSwLM5pxR-V/s-l1600.webp",
           "https://bizweb.dktcdn.net/100/461/076/products/z6123017821328-43b7ed44d7bd25aca7108232fd4ddec8.jpg?v=1733990968220"
         ];
+      } else if (team === "Manchester United" && i === 7) {
+        images = [
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/dd1fcc03285cbca1.jpg?v=1773474431150",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/f641e48242386bc6.jpg?v=1773474433247",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/1727b63ef66d8a03.jpg?v=1773474433247",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/db987452d7937510.jpg?v=1773474432720",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/4585538815d5618d.jpg?v=1773474432120",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/dd1fcc03285cbca1.jpg?v=1773474431150"
+        ];
       }
       return {
         id: `sportswear-${teamIdx * 10 + i + 1}`,
