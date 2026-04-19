@@ -471,21 +471,14 @@ export const products: Product[] = [
       "Retro Mu 1998/2000 ( 3rd )",
       "Retro Mu 1992 auth no tag",
       "Manchester United Pre-Match Jersey",
-      "Manchester United Retro Classic Jersey",
+      "Retro Rangers 1996/1997 away",
       "Manchester United Special Edition Jersey",
     ] : [
-      `${team} Home Jersey 24/25`,
-      `${team} Away Jersey 24/25`,
-      `${team} Third Jersey 24/25`,
-      `${team} Home Jersey 23/24`,
-      `${team} Away Jersey 23/24`,
-      `${team} Training Top`,
-      `${team} Anthem Jacket`,
-      `${team} Pre-Match Jersey`,
+...
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -553,11 +546,20 @@ export const products: Product[] = [
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/4585538815d5618d.jpg?v=1773474432120",
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/dd1fcc03285cbca1.jpg?v=1773474431150"
         ];
+      } else if (team === "Manchester United" && i === 8) {
+        images = [
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/566eab18.jpg?v=1739239961453",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/cb1f29d0.jpg?v=1739239965633",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/7398839b.jpg?v=1739239965633",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/7821981a.jpg?v=1739239965633",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/fc957c30.jpg?v=1739239969007",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/e3967b1c.jpg?v=1739239964667"
+        ];
       }
       return {
         id: `sportswear-${teamIdx * 10 + i + 1}`,
         name,
-        brand: team === "Manchester United" && i === 0 ? "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988" : team,
+        brand: team === "Manchester United" && i === 8 ? "Rangers" : (team === "Manchester United" && i === 0 ? "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988" : team),
         price: prices[i],
         originalPrice: originalPrices[i],
         images,
