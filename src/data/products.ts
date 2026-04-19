@@ -468,7 +468,7 @@ export const products: Product[] = [
       "Manchester United 2024/25 Third Goalkeeper Football Jersey - JH0842",
       "Retro Mu 1991/1992  awway",
       "Manchester United Third football shirt 2003 Soccer Nike Jersey Mens Trikot",
-      "Manchester United Training Top",
+      "Retro Mu 1998/2000 ( 3rd )",
       "Manchester United Anthem Jacket",
       "Manchester United Pre-Match Jersey",
       "Manchester United Retro Classic Jersey",
@@ -485,7 +485,7 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -526,8 +526,16 @@ export const products: Product[] = [
           "https://i.ebayimg.com/images/g/qfUAAOSw5ahnAY3j/s-l960.webp",
           "https://i.ebayimg.com/images/g/9t4AAOSwmxVnAY3j/s-l960.webp"
         ];
+      } else if (team === "Manchester United" && i === 5) {
+        images = [
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/224b21ff6619857b.jpg?v=1764373516750",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/97229b750e9b1e57.jpg?v=1764373517410",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/6a1ccf18689a2de4.jpg?v=1764373517410",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/b4c7e36dd26474bc.jpg?v=1764373519767",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/40bc5638d290cf17.jpg?v=1764373519767",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/e1dabeb53fc7d0db.jpg?v=1764373518213"
+        ];
       }
-
       return {
         id: `sportswear-${teamIdx * 10 + i + 1}`,
         name,
