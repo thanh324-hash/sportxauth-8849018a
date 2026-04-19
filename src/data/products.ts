@@ -467,7 +467,7 @@ export const products: Product[] = [
       "Manchester United 24/25 Home Authentic Player Long Sleeve Football Jersey – Premier League Patch + Mount #7 – IT1988",
       "Manchester United 2024/25 Third Goalkeeper Football Jersey - JH0842",
       "Retro Mu 1991/1992  awway",
-      "Manchester United Away Jersey 23/24",
+      "Manchester United Third football shirt 2003 Soccer Nike Jersey Mens Trikot",
       "Manchester United Training Top",
       "Manchester United Anthem Jacket",
       "Manchester United Pre-Match Jersey",
@@ -485,7 +485,7 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -516,6 +516,15 @@ export const products: Product[] = [
           "https://bizweb.dktcdn.net/100/461/076/products/6063cf5347ceb290ebdf6377d11cfa.jpg?v=1660383164810",
           "https://bizweb.dktcdn.net/100/461/076/products/8eb57e82f61f03415a0e638834bc19.jpg?v=1660383164810",
           "https://bizweb.dktcdn.net/100/461/076/products/86682eb4a9295c770538633c2b7235.jpg?v=1660383164810"
+        ];
+      } else if (team === "Manchester United" && i === 4) {
+        images = [
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/13b0108b.jpg?v=1773239801883",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/fa65b22d.jpg?v=1773239803910",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/48d33cea-c025134a-d69b-4647-b299-f4c0082dff24.jpg?v=1773239803910",
+          "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/568f7e27.jpg?v=1773239803910",
+          "https://i.ebayimg.com/images/g/qfUAAOSw5ahnAY3j/s-l960.webp",
+          "https://i.ebayimg.com/images/g/9t4AAOSwmxVnAY3j/s-l960.webp"
         ];
       }
 
