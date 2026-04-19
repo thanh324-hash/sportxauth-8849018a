@@ -466,7 +466,7 @@ export const products: Product[] = [
       "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988",
       "Manchester United 24/25 Home Authentic Player Long Sleeve Football Jersey – Premier League Patch + Mount #7 – IT1988",
       "Manchester United 2024/25 Third Goalkeeper Football Jersey - JH0842",
-      "Manchester United Home Jersey 23/24",
+      "Retro Mu 1991/1992  awway",
       "Manchester United Away Jersey 23/24",
       "Manchester United Training Top",
       "Manchester United Anthem Jacket",
@@ -485,7 +485,7 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -507,6 +507,15 @@ export const products: Product[] = [
           "https://cdn.hstatic.net/products/200000293662/56_78ef5df0c11a4800b4dc30f76ff9eb5d.jpg",
           "https://www.90sfootballstore.com/cdn/shop/files/F92C6BD4-2DB6-45AE-8726-57FD11D994DE_1024x1024@2x.jpg?v=1723881377",
           "https://www.90sfootballstore.com/cdn/shop/files/67E97508-59E7-42F6-9849-567389C26799_110x110@2x.jpg?v=1723881377"
+        ];
+      } else if (team === "Manchester United" && i === 3) {
+        images = [
+          "https://bizweb.dktcdn.net/100/461/076/products/8eb57e82f61f03415a0e638834bc19.jpg?v=1660383164810",
+          "https://bizweb.dktcdn.net/100/461/076/products/006ae665-be15-4f7d-a618-81034bf09af1.jpg?v=1691307076977",
+          "https://bizweb.dktcdn.net/100/461/076/products/3e13b0d53748c2169b59635a305e39.jpg?v=1660383164810",
+          "https://bizweb.dktcdn.net/100/461/076/products/6063cf5347ceb290ebdf6377d11cfa.jpg?v=1660383164810",
+          "https://bizweb.dktcdn.net/100/461/076/products/8eb57e82f61f03415a0e638834bc19.jpg?v=1660383164810",
+          "https://bizweb.dktcdn.net/100/461/076/products/86682eb4a9295c770538633c2b7235.jpg?v=1660383164810"
         ];
       }
 
