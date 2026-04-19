@@ -4,6 +4,7 @@ import { Search, SlidersHorizontal, X, ChevronDown } from "lucide-react";
 import { products, brands, categories, shoeSubBrands, sportswearTeams } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import { motion, AnimatePresence } from "framer-motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const priceRanges = [
   { label: "전체", min: 0, max: Infinity },
