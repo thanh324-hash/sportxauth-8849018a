@@ -477,7 +477,7 @@ export const products: Product[] = [
     ] : [
       "ADIDAS ARSENAL FC ORIGINALS B1764",
       "ADIDAS ARSENAL HOME JERSEY 92/94 - KE3906",
-      `${team} Retro Classic Jersey`,
+      "ARSENAL Away 25/26 FAN VERSION -  JI9511 ",
       `${team} Special Edition Jersey`,
     ];
     const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 110000, 105000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
