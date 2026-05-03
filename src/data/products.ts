@@ -475,7 +475,7 @@ export const products: Product[] = [
       "Manchester United Special Edition Jersey",
     ] : [
       "ADIDAS ARSENAL FC ORIGINALS B1764",
-      `${team} Special Edition Jersey`,
+      "ADIDAS ARSENAL HOME JERSEY 92/94 - KE3906",
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
