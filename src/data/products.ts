@@ -565,6 +565,15 @@ export const products: Product[] = [
           images[4],
           images[5]
         ];
+      } else if (team === "Arsenal" && i === 1) {
+        images = [
+          "https://bizweb.dktcdn.net/100/461/076/products/8aebfbf5de57e22e-1773961469175.jpg?v=1773961481960",
+          images[1],
+          images[2],
+          images[3],
+          images[4],
+          images[5]
+        ];
       }
       return {
         id: `sportswear-${teamIdx * 10 + i + 1}`,
