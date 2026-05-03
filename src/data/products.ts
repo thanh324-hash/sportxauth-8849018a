@@ -474,11 +474,12 @@ export const products: Product[] = [
       "Retro Rangers 1996/1997 away",
       "Manchester United Special Edition Jersey",
     ] : [
-...
+      "ADIDAS ARSENAL FC ORIGINALS B1764",
+      `${team} Special Edition Jersey`,
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000];
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -554,6 +555,15 @@ export const products: Product[] = [
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/7821981a.jpg?v=1739239965633",
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/fc957c30.jpg?v=1739239969007",
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/e3967b1c.jpg?v=1739239964667"
+        ];
+      } else if (team === "Arsenal" && i === 0) {
+        images = [
+          "https://www.asphaltgold.com/cdn/shop/files/KB1764-Adidas-Arsenal-FC-Originals-Tee-Better-Scarlet-Off-White-os-1_1024x1024.jpg?v=1772100651",
+          images[1],
+          images[2],
+          images[3],
+          images[4],
+          images[5]
         ];
       }
       return {
