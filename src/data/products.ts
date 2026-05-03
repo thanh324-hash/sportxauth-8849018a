@@ -572,6 +572,7 @@ export const products: Product[] = [
         ];
       } else if (team === "Arsenal" && i === 0) {
         images[0] = "https://www.asphaltgold.com/cdn/shop/files/KB1764-Adidas-Arsenal-FC-Originals-Tee-Better-Scarlet-Off-White-os-1_1024x1024.jpg?v=1772100651";
+        images[1] = "https://thefutbolistacloset.com/cdn/shop/files/Arsenal_Originals_Terrace_T-Shirt.png?v=1776144788&width=1100";
       } else if (team === "Arsenal" && i === 1) {
         images[0] = "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/8e949b75f69445dcb93d01842ea7504e_6165.jpeg";
       } else if (team === "Arsenal" && i === 2) {
