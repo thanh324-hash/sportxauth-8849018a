@@ -4,6 +4,7 @@ import mlbSandal3 from "@/assets/mlb-sandal-3.png";
 import mlbSandal4 from "@/assets/mlb-sandal-4.png";
 import mlbSandal5 from "@/assets/mlb-sandal-5.png";
 import mlbSandal6 from "@/assets/mlb-sandal-6.png";
+import arsenalRetro3 from "@/assets/arsenal-retro-3.jpg";
 import gucciRhyton1 from "@/assets/gucci-rhyton-1.jpg";
 import gucciRhyton2 from "@/assets/gucci-rhyton-2.jpg";
 import gucciRhyton3 from "@/assets/gucci-rhyton-3.jpg";
@@ -479,7 +480,7 @@ export const products: Product[] = [
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 110000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 110000, 105000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -568,6 +569,15 @@ export const products: Product[] = [
       } else if (team === "Arsenal" && i === 1) {
         images = [
           "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/8e949b75f69445dcb93d01842ea7504e_6165.jpeg",
+          images[1],
+          images[2],
+          images[3],
+          images[4],
+          images[5]
+        ];
+      } else if (team === "Arsenal" && i === 2) {
+        images = [
+          arsenalRetro3,
           images[1],
           images[2],
           images[3],
