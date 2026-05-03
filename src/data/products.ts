@@ -487,7 +487,7 @@ export const products: Product[] = [
     const definedNames = definedNamesMap[team] ?? [];
     const definedPricesMap: Record<string, number[]> = {
       "Manchester United": [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000],
-      "Arsenal": [70000, 110000, 85000, 110000],
+      "Arsenal": [85000, 110000, 85000, 110000],
     };
     const definedPrices = definedPricesMap[team] ?? [];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
