@@ -464,28 +464,40 @@ export const products: Product[] = [
       "Juventus": "000000/ffffff",
     };
     const color = teamColors[team] || "333333/ffffff";
-    const productNames = team === "Manchester United" ? [
-      "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988",
-      "Manchester United 24/25 Home Authentic Player Long Sleeve Football Jersey – Premier League Patch + Mount #7 – IT1988",
-      "Manchester United 2024/25 Third Goalkeeper Football Jersey - JH0842",
-      "Retro Mu 1991/1992  awway",
-      "Manchester United Third football shirt 2003 Soccer Nike Jersey Mens Trikot",
-      "Retro Mu 1998/2000 ( 3rd )",
-      "Retro Mu 1992 auth no tag",
-      "Manchester United Pre-Match Jersey",
-      "Retro Rangers 1996/1997 away",
-      "Manchester United Special Edition Jersey",
-    ] : [
-      "ADIDAS ARSENAL FC ORIGINALS B1764",
-      "ADIDAS ARSENAL HOME JERSEY 92/94 - KE3906",
-      "ARSENAL Away 25/26 FAN VERSION -  JI9511 ",
-      "ADIDAS ARSENAL Home 25/26 “JI9517”",
-    ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 110000, 85000, 110000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
+    const definedNamesMap: Record<string, string[]> = {
+      "Manchester United": [
+        "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988",
+        "Manchester United 24/25 Home Authentic Player Long Sleeve Football Jersey – Premier League Patch + Mount #7 – IT1988",
+        "Manchester United 2024/25 Third Goalkeeper Football Jersey - JH0842",
+        "Retro Mu 1991/1992  awway",
+        "Manchester United Third football shirt 2003 Soccer Nike Jersey Mens Trikot",
+        "Retro Mu 1998/2000 ( 3rd )",
+        "Retro Mu 1992 auth no tag",
+        "Manchester United Pre-Match Jersey",
+        "Retro Rangers 1996/1997 away",
+        "Manchester United Special Edition Jersey",
+      ],
+      "Arsenal": [
+        "ADIDAS ARSENAL FC ORIGINALS B1764",
+        "ADIDAS ARSENAL HOME JERSEY 92/94 - KE3906",
+        "ARSENAL Away 25/26 FAN VERSION -  JI9511 ",
+        "ADIDAS ARSENAL Home 25/26 “JI9517”",
+      ],
+    };
+    const definedNames = definedNamesMap[team] ?? [];
+    const definedPricesMap: Record<string, number[]> = {
+      "Manchester United": [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000],
+      "Arsenal": [70000, 110000, 85000, 110000],
+    };
+    const definedPrices = definedPricesMap[team] ?? [];
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
-    return productNames.map((name, i) => {
+
+    return Array.from({ length: 10 }, (_, i) => {
+      const isDefined = i < definedNames.length;
+      const name = isDefined ? definedNames[i] : `${team} 유니폼 (품절)`;
+      const price = isDefined ? definedPrices[i] : 0;
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
-      
+
       if (team === "Manchester United" && (i === 0 || i === 1)) {
         images = [
           "https://cdn.hstatic.net/products/200000293662/109_99b6cb740b6a499d82a2b741298ba54c.jpg",
@@ -559,59 +571,38 @@ export const products: Product[] = [
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/e3967b1c.jpg?v=1739239964667"
         ];
       } else if (team === "Arsenal" && i === 0) {
-        images = [
-          "https://www.asphaltgold.com/cdn/shop/files/KB1764-Adidas-Arsenal-FC-Originals-Tee-Better-Scarlet-Off-White-os-1_1024x1024.jpg?v=1772100651",
-          images[1],
-          images[2],
-          images[3],
-          images[4],
-          images[5]
-        ];
+        images[0] = "https://www.asphaltgold.com/cdn/shop/files/KB1764-Adidas-Arsenal-FC-Originals-Tee-Better-Scarlet-Off-White-os-1_1024x1024.jpg?v=1772100651";
       } else if (team === "Arsenal" && i === 1) {
-        images = [
-          "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/8e949b75f69445dcb93d01842ea7504e_6165.jpeg",
-          images[1],
-          images[2],
-          images[3],
-          images[4],
-          images[5]
-        ];
+        images[0] = "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/8e949b75f69445dcb93d01842ea7504e_6165.jpeg";
       } else if (team === "Arsenal" && i === 2) {
-        images = [
-          "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/460a2b06838843d89501263dc8ef1648_4425.jpeg",
-          images[1],
-          images[2],
-          images[3],
-          images[4],
-          images[5]
-        ];
+        images[0] = "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/460a2b06838843d89501263dc8ef1648_4425.jpeg";
       } else if (team === "Arsenal" && i === 3) {
-        images = [
-          "https://i.ebayimg.com/thumbs/images/g/MD8AAeSwl4xpi5XR/s-l500.jpg",
-          images[1],
-          images[2],
-          images[3],
-          images[4],
-          images[5]
-        ];
+        images[0] = "https://i.ebayimg.com/thumbs/images/g/MD8AAeSwl4xpi5XR/s-l500.jpg";
       }
+
+      if (!isDefined) {
+        const phUrl = `https://placehold.co/600x600/cccccc/666666?text=${encodeURIComponent("SOLD OUT")}`;
+        images = [phUrl, phUrl, phUrl, phUrl, phUrl, phUrl];
+      }
+
       return {
         id: `sportswear-${teamIdx * 10 + i + 1}`,
         name,
         brand: team === "Manchester United" && i === 8 ? "Rangers" : (team === "Manchester United" && i === 0 ? "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988" : team),
-        price: prices[i],
-        originalPrice: originalPrices[i],
+        price,
+        originalPrice: isDefined ? originalPrices[i] : undefined,
         images,
         category: "sportswear" as const,
         sizes: ["S", "M", "L", "XL", "2XL"],
         rating: +(4.3 + Math.random() * 0.6).toFixed(1),
         reviews: Math.floor(Math.random() * 300) + 50,
         description: `${team} 정품 유니폼. 프리미엄 소재와 공식 라이선스 디자인으로 최고의 품질을 자랑합니다.   주문 시 원하시는 이름으로 마킹 디자인 가능합니다 ~`,
-        isNew: i < 3,
-        isBestSeller: i === 0,
+        isNew: isDefined && i < 3,
+        isBestSeller: isDefined && i === 0,
         team,
+        outOfStock: !isDefined,
       };
-    }).filter((p) => p.id !== "sportswear-1");
+    });
   }),
 
   // ===== BAGS =====
