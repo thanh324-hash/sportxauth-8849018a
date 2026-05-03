@@ -478,7 +478,7 @@ export const products: Product[] = [
         "Manchester United Special Edition Jersey",
       ],
       "Arsenal": [
-        "ADIDAS ARSENAL FC ORIGINALS B1764",
+        "ADIDAS ARSENAL FC ORIGINALS - KB1764",
         "ADIDAS ARSENAL HOME JERSEY 92/94 - KE3906",
         "ARSENAL Away 25/26 FAN VERSION -  JI9511 ",
         "ADIDAS ARSENAL Home 25/26 “JI9517”",
