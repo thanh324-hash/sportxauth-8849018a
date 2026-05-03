@@ -556,7 +556,6 @@ export const products: Product[] = [
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/fc957c30.jpg?v=1739239969007",
           "https://bizweb.dktcdn.net/thumb/1024x1024/100/461/076/products/e3967b1c.jpg?v=1739239964667"
         ];
-        ];
       } else if (team === "Arsenal" && i === 0) {
         images = [
           "https://www.asphaltgold.com/cdn/shop/files/KB1764-Adidas-Arsenal-FC-Originals-Tee-Better-Scarlet-Off-White-os-1_1024x1024.jpg?v=1772100651",
