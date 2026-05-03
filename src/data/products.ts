@@ -575,6 +575,15 @@ export const products: Product[] = [
           images[4],
           images[5]
         ];
+      } else if (team === "Arsenal" && i === 2) {
+        images = [
+          arsenalRetro3,
+          images[1],
+          images[2],
+          images[3],
+          images[4],
+          images[5]
+        ];
       }
       return {
         id: `sportswear-${teamIdx * 10 + i + 1}`,
