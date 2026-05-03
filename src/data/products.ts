@@ -477,10 +477,10 @@ export const products: Product[] = [
     ] : [
       "ADIDAS ARSENAL FC ORIGINALS B1764",
       "ADIDAS ARSENAL HOME JERSEY 92/94 - KE3906",
-      `${team} Retro Classic Jersey`,
+      "ARSENAL Away 25/26 FAN VERSION -  JI9511 ",
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 110000, 105000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 110000, 85000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -577,7 +577,7 @@ export const products: Product[] = [
         ];
       } else if (team === "Arsenal" && i === 2) {
         images = [
-          arsenalRetro3,
+          "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/460a2b06838843d89501263dc8ef1648_4425.jpeg",
           images[1],
           images[2],
           images[3],
