@@ -577,7 +577,7 @@ export const products: Product[] = [
         ];
       } else if (team === "Arsenal" && i === 2) {
         images = [
-          arsenalRetro3,
+          "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/460a2b06838843d89501263dc8ef1648_4425.jpeg",
           images[1],
           images[2],
           images[3],
