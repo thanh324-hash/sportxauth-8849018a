@@ -466,7 +466,7 @@ export const products: Product[] = [
     const color = teamColors[team] || "333333/ffffff";
     const definedNamesMap: Record<string, string[]> = {
       "Manchester United": [
-        "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988",
+        "ADIDAS MANCHESTER UNITED Home 24/25 “IT1988”",
         "Manchester United 24/25 Home Authentic Player Long Sleeve Football Jersey – Premier League Patch + Mount #7 – IT1988",
         "Manchester United 2024/25 Third Goalkeeper Football Jersey - JH0842",
         "Retro Mu 1991/1992  awway",
@@ -588,7 +588,7 @@ export const products: Product[] = [
       return {
         id: `sportswear-${teamIdx * 10 + i + 1}`,
         name,
-        brand: team === "Manchester United" && i === 8 ? "Rangers" : (team === "Manchester United" && i === 0 ? "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988" : team),
+        brand: team === "Manchester United" && i === 8 ? "Rangers" : team,
         price,
         originalPrice: isDefined ? originalPrices[i] : undefined,
         images,
