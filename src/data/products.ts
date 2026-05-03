@@ -4,6 +4,7 @@ import mlbSandal3 from "@/assets/mlb-sandal-3.png";
 import mlbSandal4 from "@/assets/mlb-sandal-4.png";
 import mlbSandal5 from "@/assets/mlb-sandal-5.png";
 import mlbSandal6 from "@/assets/mlb-sandal-6.png";
+import arsenalRetro3 from "@/assets/arsenal-retro-3.jpg";
 import gucciRhyton1 from "@/assets/gucci-rhyton-1.jpg";
 import gucciRhyton2 from "@/assets/gucci-rhyton-2.jpg";
 import gucciRhyton3 from "@/assets/gucci-rhyton-3.jpg";
