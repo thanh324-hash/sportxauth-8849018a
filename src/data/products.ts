@@ -588,7 +588,7 @@ export const products: Product[] = [
       return {
         id: `sportswear-${teamIdx * 10 + i + 1}`,
         name,
-        brand: team === "Manchester United" && i === 8 ? "Rangers" : (team === "Manchester United" && i === 0 ? "MANCHESTER UNITED 24/25 HOME AUTHENTIC PLAYER LONG SLEEVE FOOTBALL JERSEY – PREMIER LEAGUE PATCH + MOUNT #7 – IT1988" : team),
+        brand: team === "Manchester United" && i === 8 ? "Rangers" : team,
         price,
         originalPrice: isDefined ? originalPrices[i] : undefined,
         images,
