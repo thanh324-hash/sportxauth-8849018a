@@ -21,7 +21,7 @@ export default function ProductCard({ product, index = 0 }: Props) {
           <img
             src={product.images[0]}
             alt={product.name}
-            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            className={`w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 ${product.outOfStock ? "opacity-50 grayscale" : ""}`}
           />
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-1">
@@ -36,6 +36,13 @@ export default function ProductCard({ product, index = 0 }: Props) {
               </span>
             )}
           </div>
+          {product.outOfStock && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="bg-foreground text-background text-xs font-bold uppercase tracking-widest px-4 py-2">
+                품절
+              </span>
+            </div>
+          )}
           <button
             onClick={(e) => { e.preventDefault(); }}
             className="absolute top-3 right-3 p-2 bg-background/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
@@ -51,11 +58,17 @@ export default function ProductCard({ product, index = 0 }: Props) {
             {product.name}
           </h3>
           <div className="flex items-center gap-2">
-            <span className="text-sm font-bold">{formatPrice(product.price)}</span>
-            {product.originalPrice && (
-              <span className="text-xs text-muted-foreground line-through">
-                {formatPrice(product.originalPrice)}
-              </span>
+            {product.outOfStock ? (
+              <span className="text-sm font-bold text-muted-foreground">품절</span>
+            ) : (
+              <>
+                <span className="text-sm font-bold">{formatPrice(product.price)}</span>
+                {product.originalPrice && (
+                  <span className="text-xs text-muted-foreground line-through">
+                    {formatPrice(product.originalPrice)}
+                  </span>
+                )}
+              </>
             )}
           </div>
           <div className="flex items-center gap-1 mt-1">
