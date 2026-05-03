@@ -475,11 +475,11 @@ export const products: Product[] = [
       "Manchester United Special Edition Jersey",
     ] : [
       "ADIDAS ARSENAL FC ORIGINALS B1764",
-      `${team} Special Edition Jersey`,
+      "ADIDAS ARSENAL HOME JERSEY 92/94 - KE3906",
       `${team} Retro Classic Jersey`,
       `${team} Special Edition Jersey`,
     ];
-    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
+    const prices = team === "Manchester United" ? [116000, 116000, 89000, 95000, 128000, 106000, 156000, 97000, 105000, 450000] : (team === "Arsenal" ? [70000, 110000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000] : [350000, 350000, 370000, 280000, 280000, 250000, 420000, 300000, 390000, 450000]);
     const originalPrices = [undefined, undefined, undefined, 350000, 350000, 300000, undefined, 350000, undefined, undefined];
     return productNames.map((name, i) => {
       let images = Array.from({ length: 6 }, (_, j) => `https://placehold.co/600x600/${color}?text=${encodeURIComponent(team.slice(0, 3).toUpperCase())}+${i + 1}+IMG${j + 1}`);
@@ -559,6 +559,15 @@ export const products: Product[] = [
       } else if (team === "Arsenal" && i === 0) {
         images = [
           "https://www.asphaltgold.com/cdn/shop/files/KB1764-Adidas-Arsenal-FC-Originals-Tee-Better-Scarlet-Off-White-os-1_1024x1024.jpg?v=1772100651",
+          images[1],
+          images[2],
+          images[3],
+          images[4],
+          images[5]
+        ];
+      } else if (team === "Arsenal" && i === 1) {
+        images = [
+          "https://bizweb.dktcdn.net/100/461/076/products/8aebfbf5de57e22e-1773961469175.jpg?v=1773961481960",
           images[1],
           images[2],
           images[3],
