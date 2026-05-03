@@ -173,15 +173,17 @@ export default function ProductDetailPage() {
 
         {/* Section 3: All images stacked */}
         <div className="flex flex-col gap-4 mb-12">
-          {product.images.map((img, i) => (
-            <div key={i} className="bg-secondary rounded-sm overflow-hidden flex items-center justify-center">
-              <img
-                src={img}
-                alt={`${product.name} - ${i + 1}`}
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          ))}
+          {product.images
+            .filter((img) => !img.includes("placehold.co"))
+            .map((img, i) => (
+              <div key={i} className="bg-secondary rounded-sm overflow-hidden flex items-center justify-center">
+                <img
+                  src={img}
+                  alt={`${product.name} - ${i + 1}`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            ))}
         </div>
 
         {/* Related Products */}
