@@ -580,8 +580,8 @@ export const products: Product[] = [
       } else if (team === "Arsenal" && i === 2) {
         images[0] = "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/460a2b06838843d89501263dc8ef1648_4425.jpeg";
       } else if (team === "Arsenal" && i === 3) {
-        images[0] = "/products/arsenal-home-25-26-v2.jpg";
-        images[1] = "https://cdn.hstatic.net/products/200000293662/ao_arsenal_2025-26_san_nha_do_saliba_.zip__1__d8ca221f93ce4104a49d1807223eddee_1024x1024.jpg";
+        const arsenalImg = "/products/arsenal-home-25-26-v2.jpg";
+        images = [arsenalImg, arsenalImg, arsenalImg, arsenalImg, arsenalImg, arsenalImg];
       }
 
       if (!isDefined) {
