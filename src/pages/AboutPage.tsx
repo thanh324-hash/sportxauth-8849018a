@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Award, Truck, RefreshCw } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const commitments = [
   { icon: Shield, title: "100% 정품 보장", desc: "모든 상품은 공식 수입 정품입니다. 정품 인증서를 함께 제공합니다." },
@@ -11,6 +12,11 @@ const commitments = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="회사 소개 - SPORTX"
+        description="SPORTX는 대한민국 No.1 정품 스포츠 & 패션 신발 전문 온라인 스토어입니다. 우리의 이야기와 약속을 만나보세요."
+        path="/about"
+      />
       <div className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-display text-5xl tracking-wider mb-4">회사 소개</h1>

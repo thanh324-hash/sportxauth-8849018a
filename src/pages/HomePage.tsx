@@ -6,6 +6,7 @@ import ProductCard from "@/components/ProductCard";
 import heroBannerBg from "@/assets/hero-banner-bg.jpg";
 import heroShoeDunk from "@/assets/hero-shoe-nike-dunk.png";
 import promoBanner from "@/assets/promo-banner.jpg";
+import SEO from "@/components/SEO";
 
 const bestSellers = products.filter((p) => p.isBestSeller);
 const newArrivals = products.filter((p) => p.isNew);
@@ -19,6 +20,15 @@ const reviews = [
 export default function HomePage() {
   return (
     <div>
+      <SEO
+        title="SPORTX - 정품 스포츠 & 패션 신발 온라인 스토어"
+        description="Nike, Adidas, Puma, New Balance 정품 스니커즈와 스포츠웨어를 국내외 배송으로 만나보세요. 100% 정품 보장."
+        path="/"
+        jsonLd={[
+          { "@context": "https://schema.org", "@type": "WebSite", name: "SPORTX", url: "https://sportxauthh.lovable.app/" },
+          { "@context": "https://schema.org", "@type": "Organization", name: "SPORTX", url: "https://sportxauthh.lovable.app/" },
+        ]}
+      />
       {/* Hero */}
       <section className="relative h-[85vh] min-h-[600px] bg-sport-dark overflow-hidden">
         <img

@@ -3,6 +3,7 @@ import { Minus, Plus, X, ShoppingBag, ArrowRight } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
 import { formatPrice } from "@/data/products";
 import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, totalPrice } = useCartStore();
@@ -25,6 +26,11 @@ export default function CartPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="장바구니 - SPORTX"
+        description="SPORTX 장바구니에 담긴 정품 스니커즈를 확인하고 결제를 진행하세요."
+        path="/cart"
+      />
       <div className="container mx-auto px-4 py-10">
         <h1 className="font-display text-4xl tracking-wider mb-10">장바구니</h1>
 

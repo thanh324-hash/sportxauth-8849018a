@@ -5,6 +5,7 @@ import { products, brands, categories, shoeSubBrands, sportswearTeams } from "@/
 import ProductCard from "@/components/ProductCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import SEO from "@/components/SEO";
 
 const priceRanges = [
   { label: "전체", min: 0, max: Infinity },
@@ -52,6 +53,12 @@ export default function ShopPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="쇼핑 - SPORTX 정품 스니커즈 & 스포츠웨어"
+        description="Nike, Adidas, Puma, New Balance 정품 스니커즈와 축구 유니폼을 브랜드와 카테고리별로 둘러보세요."
+        path="/shop"
+        jsonLd={{ "@context": "https://schema.org", "@type": "CollectionPage", name: "SPORTX Shop", url: "https://sportxauthh.lovable.app/shop" }}
+      />
       {/* Page Header */}
       <div className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
