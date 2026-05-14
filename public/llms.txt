@@ -1,0 +1,12 @@
+# SPORTX
+
+> SPORTX는 Nike, Adidas, Puma, New Balance 등 정품 스포츠화 및 패션 신발을 국내외 배송으로 제공하는 프리미엄 온라인 스토어입니다.
+
+## Pages
+
+- [Home](/): Featured sneakers, new arrivals, and best sellers.
+- [Shop](/shop): Browse all authentic sneakers and sportswear by brand and category.
+- [About](/about): SPORTX brand story, authenticity guarantee, and commitments.
+- [Contact](/contact): Customer support and inquiries.
+- [Cart](/cart): Shopping cart.
+- [Checkout](/checkout): Order checkout with KakaoPay, NaverPay, and bank transfer.
