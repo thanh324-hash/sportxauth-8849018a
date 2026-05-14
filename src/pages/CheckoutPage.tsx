@@ -3,6 +3,7 @@ import { useCartStore } from "@/store/cartStore";
 import { formatPrice } from "@/data/products";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
 
 export default function CheckoutPage() {
   const { items, totalPrice, clearCart } = useCartStore();
@@ -30,6 +31,11 @@ export default function CheckoutPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="결제 - SPORTX"
+        description="SPORTX 주문 결제. KakaoPay, NaverPay, 무통장 입금으로 안전하게 결제하세요."
+        path="/checkout"
+      />
       <div className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-display text-4xl tracking-wider">결제</h1>

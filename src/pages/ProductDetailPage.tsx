@@ -6,6 +6,7 @@ import { products, formatPrice } from "@/data/products";
 import { useCartStore } from "@/store/cartStore";
 import ProductCard from "@/components/ProductCard";
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
@@ -37,6 +38,27 @@ export default function ProductDetailPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title={`${product.name} - SPORTX`}
+        description={`${product.brand} ${product.name} 정품. ${formatPrice(product.price)}. SPORTX에서 구매하세요.`}
+        path={`/product/${product.id}`}
+        type="product"
+        image={product.images?.[0]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: product.name,
+          image: product.images,
+          brand: { "@type": "Brand", name: product.brand },
+          offers: {
+            "@type": "Offer",
+            url: `https://sportxauthh.lovable.app/product/${product.id}`,
+            priceCurrency: "KRW",
+            price: product.price,
+            availability: "https://schema.org/InStock",
+          },
+        }}
+      />
       <div className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <Link to="/shop" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors">

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
 
 export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -10,6 +11,11 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="문의하기 - SPORTX 고객 지원"
+        description="SPORTX 고객 지원팀에 문의하세요. 주문, 배송, 정품 문의 등 빠르게 답변드립니다."
+        path="/contact"
+      />
       <div className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-display text-5xl tracking-wider mb-4">문의하기</h1>
