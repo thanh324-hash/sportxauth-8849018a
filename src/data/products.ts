@@ -580,7 +580,7 @@ export const products: Product[] = [
       } else if (team === "Arsenal" && i === 2) {
         images[0] = "https://www.vanauthentic.com/watermark/product/750x750x2/upload/product/460a2b06838843d89501263dc8ef1648_4425.jpeg";
       } else if (team === "Arsenal" && i === 3) {
-        const arsenalImg = "/products/arsenal-home-25-26-v2.jpg";
+        const arsenalImg = "/products/arsenal-home-25-26-v3.jpg";
         images = [arsenalImg, arsenalImg, arsenalImg, arsenalImg, arsenalImg, arsenalImg];
       }
 
